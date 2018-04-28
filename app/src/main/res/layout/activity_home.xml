@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="abass.com.firebasepushnotifications.abass.com.Es3fny.Main.Home">
+
+    <include
+        layout="@layout/my_action_bar"
+        android:id="@+id/app_bar"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/help_request_Btn"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="7dp"
+            android:textColor="#FF0099FF"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/help"
+            android:padding="25dp"
+            android:text="@string/request_help"
+            android:textSize="18sp"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/Blood_BTN"
+            android:layout_width="0dp"
+            android:textStyle="bold"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/bloodtransfusion1"
+            android:padding="25dp"
+            android:text="@string/request_blood"
+            android:textColor="#FF0099FF"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="7dp"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="1"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/SOS_BTN"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:drawableTop="@drawable/sos1"
+            android:padding="25dp"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="7dp"
+            android:text="@string/sos_message"
+            android:textSize="18sp"
+            android:textColor="#FF0099FF"
+            tools:ignore="NestedWeights" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/Places_BTN"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="#FF0099FF"
+            android:drawableTop="@drawable/placeholder1"
+            android:padding="25dp"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="7dp"
+            android:text="@string/places"
+            android:textSize="18sp"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/First_Aid_BTN"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="#FF0099FF"
+            android:drawableTop="@drawable/kit"
+            android:padding="25dp"
+            android:background="@drawable/rounded_button"
+            android:layout_margin="7dp"
+            android:text="@string/first_aid_tips"
+            android:textSize="18sp"/>
+    </LinearLayout>
+</LinearLayout>

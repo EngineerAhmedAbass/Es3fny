@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp">
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/nunito_semibold"
+        android:background="@drawable/relative_layout_background"
+        android:gravity="center"
+        android:text="@string/distance"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/sender_name"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_toStartOf="@+id/distance"
+        android:background="@drawable/relative_layout_background"
+        android:layout_alignParentTop="true"
+        android:fontFamily="@font/nunito_semibold"
+        android:gravity="center"
+        android:text="@string/user_name"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/domain"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_toStartOf="@+id/distance"
+        android:background="@drawable/relative_layout_background"
+        android:layout_below="@+id/sender_name"
+        android:fontFamily="@font/nunito_semibold"
+        android:gravity="center"
+        android:text="@string/domain"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</RelativeLayout>

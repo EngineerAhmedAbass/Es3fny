@@ -1,0 +1,308 @@
+<resources>
+    <string name="app_name">Es3fny</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_channel_id" translatable="false">Ch01_Abass</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="settings_name">Settings</string>
+    <string name="Notification">Notification</string>
+    <string-array name="Requests_Domains">
+        <item>Heart</item>
+        <item>Burns</item>
+        <item>Pressure and Sugar</item>
+        <item>Coma</item>
+        <item>First Aid</item>
+    </string-array>
+    <string-array name="blood_types">
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+    <string-array name="sorting_method">
+        <item>Select Sorting Method</item>
+        <item>Ascending by Distance</item>
+        <item>Descending by Distance</item>
+        <item>Ascending by Time</item>
+        <item>Descending by Time</item>
+    </string-array>
+    <string name="title_activity_splash">Splash</string>
+    <string name="dummy_button" translatable="false">Dummy Button</string>
+    <string name="dummy_content" translatable="false">DUMMY\nCONTENT</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+    <string name="log_out">Log Out</string>
+
+    <!-- **************************************** -->
+    <string name="hello_world">Hello World</string>
+    <string name="instruction1">- To be able to use this feature please turn on the switch.</string>
+    <string name="instruction2">- Add at least one contact and at most 3 contacts.</string>
+    <string name="instruction3">- The SOS message will contain your current location in addition to the following text message: \'Please Help Me\'</string>
+    <string name="send_sos_message_btn">Send SOS Message</string>
+    <string name="add_edit_contacts_btn">Add / Edit Contacts</string>
+    <string name="add_contact_btn">Add Contact</string>
+    <string name="back_btn">Back</string>
+    <string name="sending_to">Sending to:</string>
+    <string name="send_btn">Send</string>
+    <string name="sos_deactivate">Deactivate SOS Message!</string>
+    <string name="sos_activate">Activate SOS Message!</string>
+    <string name="name">Name:</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="remove">Remove</string>
+    <string name="notifications_admin_channel_name" translatable="false">Es3fny_Channel</string>
+    <string name="notifications_admin_channel_description" translatable="false">This Channel Used In Notification Of Es3fny App</string>
+    <string name="home">Home</string>
+    <string name="blood_type">blood type</string>
+    <string name="describe_the_patient_state">Describe the Request Information</string>
+    <string name="send_request">Send Request</string>
+    <string name="help_domain">Help Domain</string>
+    <string name="request_help">Request Help</string>
+    <string name="request_blood">Request Blood</string>
+    <string name="sos_message">SOS Message</string>
+    <string name="places">Places</string>
+    <string name="first_aid_tips">First Aid Tips</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="skip">Skip</string>
+    <string name="go_to_register">Go To Registration</string>
+    <string name="hospital">Hospital</string>
+    <string name="pharmacy">Pharmacy</string>
+    <string name="police">Police</string>
+    <string name="within_3_km">within 3 KM</string>
+    <string name="find">Find</string>
+    <string name="status">Status</string>
+    <string name="request_from">Request From</string>
+    <string name="sender_name">Sender Name</string>
+    <string name="domain">Domain</string>
+    <string name="description">Description</string>
+    <string name="address">Address</string>
+    <string name="respond">Respond</string>
+    <string name="full_name">Full Name</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="city">City</string>
+    <string name="street">Street</string>
+    <string name="national_id">National ID</string>
+    <string name="register">Register</string>
+    <string name="go_to_login">go to login</string>
+    <string name="help_request">Help Request</string>
+    <string name="donor">Blood Donor</string>
+    <string name="responces">Responces</string>
+    <string name="toolbar_title">Toolbar Title</string>
+    <string name="distance">Distance</string>
+    <string name="user_name">User Name</string>
+    <string name="blood_request_success">Blood Donation Request Sent</string>
+    <string name="permission_denied">Sorry Permission Denied .</string>
+    <string name="location_enabled">Location Enabled .</string>
+    <string name="no_internet">No Internet Connection.</string>
+    <string name="location_disabled">Location Disabled…</string>
+    <string name="requesting">Requesting</string>
+    <string name="please_wait_till_help_request">Please Wait till Help Request Completes</string>
+    <string name="enter_help_request_message">Please Enter Help Request Message</string>
+    <string name="please_wait_till_blood_request">Please Wait till Blood Request Completes</string>
+    <string name="open_location_first">Please Open Location First</string>
+    <string name="enter_email">Error : You Must Enter Your Email</string>
+    <string name="enter_password">Error :  You Must Enter Your Password</string>
+    <string name="welcome">Welcome </string>
+    <string name="the_location">The Location</string>
+    <string name="response">response</string>
+    <string name="respond_message">I\'m willing to help</string>
+    <string name="waiting">waiting</string>
+    <string name="closed">closed</string>
+    <string name="respond_sent">Respond Sent</string>
+    <string name="km">Km</string>
+    <string name="loading">Loading</string>
+    <string name="wait_till_notification_loads">Please Wait Till Notification Loads</string>
+    <string name="something_went_wrong">Something Went Wrong with your location Please Try Again…</string>
+    <string name="registering">Registering</string>
+    <string name="wait_till_register_complete">Please Wait until Registering completes</string>
+    <string name="must_enter_name">Error : You Must Enter a Name</string>
+    <string name="must_enter_email">Error : You Must Enter an Email</string>
+    <string name="must_enter_password">Error : You Must Enter a Password</string>
+    <string name="must_enter_NID">Error : You Must Enter Your National ID</string>
+    <string name="must_enter_valid_NID">Error : You Must Enter A Valid National ID</string>
+    <string name="invalid_NID">Error : Invalid National ID</string>
+    <string name="young_for_register">Error : You must be greater than 19 years</string>
+    <string name="choose_sort_method">Please Choose Sorting Method</string>
+    <string name="activate_sos">Please Activate SOS Message First!</string>
+    <string name="add_contact_first">Please Add contacts first!</string>
+    <string name="sms_sent">SOS Message Sent!</string>
+    <string name="sms_failed">SMS failed, please try again later!</string>
+    <string name="add_3_contacts">Sorry you can\'t add more than 3 Contacts!</string>
+    <string name="contact_deleted_success">Contact deleted successfully!</string>
+    <string name="contact_added_success">Contact added successfully!</string>
+    <string name="back_to_exit">Press again to exit</string>
+    <string name="description_title">Description</string>
+    <string name="address_title">Address</string>
+    <string name="language">عربي</string>
+    <string name="es3fny_logo" translatable="false">Es3fny Logo</string>
+    <string name="tab_text_1" translatable="false">Tab 1</string>
+    <string name="tab_text_2" translatable="false">Tab 2</string>
+    <string name="tab_text_3" translatable="false">Tab 3</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="section_format" translatable="false">Hello World from section: %1$d</string>
+    <string name="safe_place" translatable="false">تأكد ان المكان امن حتي لاتصاب</string>
+    <string name="shout" translatable="false">اصرخ أو اطلب المساعدة</string>
+    <string name="onFire" translatable="false">إذا كانت ملابس الشخص مشتعلة</string>
+    <string name="but_Water" translatable="false">أ) اغمرالحريق بالماء</string>
+    <string name="burn_page_title" translatable="false"> حرق النار</string>
+    <string name="blanket" translatable="false">ب)او لفة باستخدام بطانية</string>
+    <string name="roll" translatable="false">ج)أو اطلب من الضحية أن يتدحرج على الأرض</string>
+    <string name="cool" translatable="false">برّد الحرق بالماء الجاري كحد ادنى ١٠-١٥ دقيقة!</string>
+    <string name="dont_use" translatable="false">لا تضع لصق الجروح ولا تضع أي مراهم</string>
+    <string name="cotton_cover" translatable="false">غطي المنطقة المحروقة بقطعة قماش قطنية نظيفة</string>
+    <string name="keep_warm" translatable="false">إبقي الضحية دافئة</string>
+    <string name="transport" translatable="false">انقل الضحية إلى أقرب مركز للرعاية الصحية</string>
+    <string name="wash_reminder" translatable="false">دائما اغسل يديك بعد تقديم الرعاية</string>
+    <string name="amputation" translatable="false">البتر</string>
+    <string name="amputation_transport" translatable="false">النقل السريع للشخص والجزء المبتور إلى المستشفى</string>
+    <string name="write_Down" translatable="false">أكتب أسم الشخص و سبب البتر و وقت الحادث و التعبئة على ورقة و أحفظها</string>
+    <string name="package_part2" translatable="false">ضع هذه الحقيبة في وعاء آخر مع الثلج ، ولكن لا ينبغي للثلج أن يكون على اتصال مباشر بالجزء المبتور</string>
+    <string name="blood_contact" translatable="false">قلل الاتصال مع دم الشخص.إذا كان لديك قفازات متاحة استخدامها لحماية يديك.يمكنك أيضا استخدام كيس من البلاستيك لتغطية يديك</string>
+    <string name="bleed_control" translatable="false">سيطر على النزيف عن طريق الضغط المباشر على الجرح</string>
+    <string name="cotton_wound" translatable="false">ضع قطعة قماش نظيفةعلى الجرح</string>
+    <string name="no_liquids" translatable="false">لا تضع أي سوائل أو مطهرات على الجزءالمبتور</string>
+    <string name="package_part1" translatable="false">ضع الجزء المبتور في كيس بلاستيكي نظيف</string>
+    <string name="b1" translatable="false">١</string>
+    <string name="b2" translatable="false">۲</string>
+    <string name="b3" translatable="false">۳</string>
+    <string name="b4" translatable="false">٤</string>
+    <string name="b5" translatable="false">٥</string>
+    <string name="b6" translatable="false">٦</string>
+    <string name="b7" translatable="false">٧</string>
+    <string name="b8" translatable="false">٨</string>
+    <string name="b9" translatable="false">٩</string>
+    <string name="b10" translatable="false">١٠</string>
+    <string name="b11" translatable="false">١١</string>
+    <string name="b12" translatable="false">١٢</string>
+    <string name="b13" translatable="false">١۳</string>
+    <string name="b14" translatable="false">١٤</string>
+    <string name="b15" translatable="false">١٥</string>
+    <string name="do_nothing" translatable="false">إذا كان الشخص يستطيع الإجابة على السؤال ، لا تفعل أي شيء فقط ابقا معه ، وحثه على السعال</string>
+    <string name="chocking_question" translatable="false">اسأل الشخص ، هل أنت تختنق؟</string>
+    <string name="chocking_kemTech" translatable="false">اختناق(البالغين)</string>
+    <string name="go_behind" translatable="false">إذا كان الشخص غير قادر على الكلام أو السعال أو التنفس ، اذهب و قف وراء الشخص</string>
+    <string name="support_chest" translatable="false">ادعم صدر الشخص بيد واحدة</string>
+    <string name="bend" translatable="false">احني الشخص إلى الأمام</string>
+    <string name="hit_back" translatable="false">إعطي خمس ضربات قوية في منتصف العلوي لظهر الشخص بكف يدك</string>
+    <string name="chocking_object" translatable="false">إذا لم يخرج الشئ العالق</string>
+    <string name="fisting" translatable="false">ضع ذراعيك حول الشخص بحيث تلتقي يداك في الأمام ، اصنع بيدك قبضة . ضع قبضة يدك بين السرة الخاصة بالشخص والطرف السفلي من صدره</string>
+    <string name="thrusts" translatable="false">اعط خمسة دفعات في البطن عن طريق سحب قبضة يدك إلى الداخل وإلى أعلى</string>
+    <string name="no_progress_choking" translatable="false">إذا لم يخرج الشئ العالق ، إذا كرر إعطاء خمس ضربات وخمس دفعات حتى يخرج الشئ العالق</string>
+    <string name="CPR_choking" translatable="false">إذا فقد الشخص وعيه. اصرخ أو اطلب المساعدة ضع الشخص على الأرض وابدء في إعطاء الإنعاش القلبي الرئوي(CPR)</string>
+    <string name="transport_person" translatable="false">دائما أنقل الشخص إلى مركز للرعاية الصحية للمتابعة</string>
+    <string name="pregnant_warning" translatable="false">ملاحظة: إذا كان الشخص المختنق امرأة حامل في نهاية فترة الحمل ، لا تضغط على البطن نهائياً ، ولكن ضع يديك في منتصف الصدر لإعطاء الدفعات الخمسة</string>
+    <string name="dog_bite" translatable="false">عضة كلب</string>
+    <string name="dog_cant_bite_you" translatable="false">تأكد أن الكلب لا يمكنه أن يعضك</string>
+    <string name="wash_if_possible" translatable="false">اغسل يديك ، إن أمكن</string>
+    <string name="water_detergent" translatable="false">اغسل جرح العضة فورًا بالماء النظيف لمدة ١٠-١٥ دقيقة. اغسل الجرح بالماء مع مطهّر إذا كان متاحًا</string>
+    <string name="baby_choking" translatable="false">اختناق الأطفال</string>
+    <string name="kneel" translatable="false">اركع على الأرض و ضع الطفل على فخذك</string>
+    <string name="forearm" translatable="false">ضع وجه الطفل لأسفل على ساعدك. دعم الرأس والرقبة ، ولكن تأكد من عدم تغطية الفم</string>
+    <string name="blow_baby" translatable="false">أعط بكف يدك الحرة خمس ضربات بين كتفي الطفل</string>
+    <string name="stuck_thing" translatable="false">ثم سريعاً لف الطفل وتحقق مما إذا كان الشيء العالق قد خرج</string>
+    <string name="didnt_come_out" translatable="false">إذا لم يخرج الشيء العالق ، ضع أصبعين (لا تستخدم الإبهام) في وسط صدر الطفل</string>
+    <string name="baby_thrusts" translatable="false">إعطاء خمسة دفعات عن طريق دفع للداخل و إلى الأعلى</string>
+    <string name="repeat" translatable="false">إذا لم يخرج الشيء العالق ، كرر إعطاء خمس ضربات و خمس دفعات صدر حتى يخرج الشئ العالق</string>
+    <string name="baby_lost_conscious" translatable="false">إذا فقد الطفل وعيه ، ابدأ في إعطاء الإنعاش القلبي الرئوي(CPR)</string>
+    <string name="baby_transport" translatable="false">دائماً انقل الطفل سرعاً إلى مركز للرعاية الصحية للمتابعة</string>
+    <string name="stop_bleeding" translatable="false">إذا توقف النزيف ، قم بتغطية الجرح بقطعة قماش قطنية نظيفة</string>
+    <string name="self_presure" translatable="false">اوقف النزيف بالضغط بكلتا يديه على الجرح إن أمكن ، يمكن للشخص أن يضغط على الجرح بنفسه</string>
+    <string name="sit_lay" translatable="false">اطلب من الشخص الجلوس أو الاستلقاء على الأرض</string>
+    <string name="bleed" translatable="false">النزيف</string>
+    <string name="rest" translatable="false">اطلب من الشخص الراحة وعدم التحرك</string>
+    <string name="askto_sit" translatable="false">اطلب من الشخص الجلوس في وضع يجده مريحًا</string>
+    <string name="reassure" translatable="false">طمأن الشخص وأخبره بأنك طلبت المساعدة</string>
+    <string name="heart_medic" translatable="false">اسأل الشخص عما إذا كان يتناول أدوية لعلاج حاله قلبه. إذا كان الأمر كذلك ، دعه يأخذ الدواء الموصوف</string>
+    <string name="chew_aspirin" translatable="false">إذا كان هناك أسبيرين متوفر ، اسأله عما إذا كان لديه أي اضطراب نزيف معروف أو أي حالة تتعارض مع استخدام الأسبرين. إذا لم يتواجد اي مانع ، اطلب من الشخص مضغ قرص الأسبرين وابتلاعه لأنه سيساعد تدفق الدم إلى القلب</string>
+    <string name="fracture" translatable="false">الكسور</string>
+    <string name="advice" translatable="false">ساعد الشخص ان الهدوء وانصحة بعدم التحرك</string>
+    <string name="no_movement" translatable="false">حاول ألا تحرك الطرف الممزق أو المخلوع</string>
+    <string name="secure" translatable="false">حاول عدم تحريك المصاب حتى يتم تأمين الجزء المصاب</string>
+    <string name="if_bleeding" translatable="false">إذا كان هناك أيضًا نزيف ، أوقف النزيف بوضع ضغط مباشر على الجرح</string>
+    <string name="suggest_supp" translatable="false">شيْر إلى المصاب ان يدعم الجزء المصاب (على سبيل المثال ذراع مكسورة) بنفسه. أو اطلب من أحد المارة القيام بذلك</string>
+    <string name="immobilise" translatable="false">ثبت الجزء المصاب بضمادة ، حاول عدم تحريك الجزء المصاب أثناء القيام بذلك</string>
+    <string name="splint" translatable="false">إذا تدربت على كيفية عمل الجبيرة من قبل ، يمكنك تثبيت الطرف الممزق بالجبيرة</string>
+    <string name="feast" translatable="false">لا تعطي الشخص أي شيء للشرب أو الأكل</string>
+    <string name="wash_before" translatable="false">اغسل يديك قبل تقديم الرعاية</string>
+    <string name="temp_measure" translatable="false">اكتشف مدى ارتفاع درجة حرارة الشخص عن طريق قياسه أو من خلال الشعور</string>
+    <string name="ask_reast" translatable="false">اطلب من الشخص أن يستريح</string>
+    <string name="cool_place" translatable="false">انقل الشخص إلى بيئة باردة</string>
+    <string name="dehydration" translatable="false">إعطي الشخص الكثير من الماء للشرب لمنع حدوث الجفاف</string>
+    <string name="clothes" translatable="false">قييم كيف يرتدي الشخص. الكثير من الملابس سوف تزيد من درجة الحرارة ؛ قليل من الملابس يمكن أن يسبب الارتعاش</string>
+    <string name="sponge" translatable="false">في نهاية المطاف يمكنك عمل كمدات للشخص المريض بماء بدرجة حرارة الغرفة</string>
+    <string name="day_night_check" translatable="false">استمر في فحص المريض أثناء النهار والليل</string>
+    <string name="fever_transport" translatable="false">أحضر المريض إلى مركز للرعاية الصحية إذا بقيت الحمى أو ساءت حالة الشخص</string>
+    <string name="cuts_bruises" translatable="false">جروح و كدمات</string>
+    <string name="bleeding_stopped" translatable="false">عندما يتوقف النزيف ، اغسل الجرح بالماء النقي. إذا كان الجرح لا يزال ينزف ، لا تضيع الوقت لتنظيف الجرح ولكن الاستمرار في الضغط على الجرح لوقف النزيف</string>
+    <string name="bandage" translatable="false">ضع ضمادة على الجرح ولكن لا تضيقها بشدة</string>
+    <string name="fever" translatable="false">الحمة</string>
+    <string name="keep_clean" translatable="false">أخبر الشخص أن يحافظ على الجرح نظيفًا وجافًا. يجب تغيير علي الجرح كل يومين أو ثلاثة أيام</string>
+    <string name="chest_pain" translatable="false">الم في الصدر</string>
+    <string name="asthma" translatable="false">الربو</string>
+    <string name="choose_situation" translatable="false">اختار الحالة</string>
+    <string name="nose_bleed" translatable="false">نزيف الانف</string>
+    <string name="pinsh_nose" translatable="false">اطلب من الشخص أن يقرص أنفه فوق فتحة الأنف بابهامه و السبابه و أخبره أن يتنفس من خلال الفم</string>
+    <string name="continute_binch" translatable="false">واصل قرص لمدة من 10 إلى 15 دقيقة. وسوف يتوقف نزيف الأنف</string>
+    <string name="nose_bleed_transport" translatable="false">إذا استمر النزف بعد 20 دقيقة ؛ أو كان النزيف ناتجًا عن لكمة في الأنف أو الرأس ؛ أو عن طريق السقوط أو حادث , إذا كان النزيف ثقيلًا أو عندما يأخذ الشخص دواء يعمل علي سيولة الدم ، أو اصبح الشخص شاحبًا أو نائمًا أو فقد وعيه: اطلب المساعدة الطبية العاجلة</string>
+    <string name="safe_from_drowning" translatable="false">تأكد من أنك لست في خطر الغرق</string>
+    <string name="rope_help" translatable="false">حاول إلقاء حبل أو شيء ما للشخص الذي يمكنه التمسك به</string>
+    <string name="get_victim_out" translatable="false">أزل الضحية من الماء ، لكن لا تضع نفسك في خطر عند القيام بذلك</string>
+    <string name="get_the_water_out" translatable="false">عند انقاذه ، لا تحاول اخراج المياه من رئاتي الضحية</string>
+    <string name="recovery_position" translatable="false">إذا كان الشخص يتنفس ، ضعه في وضع الامان</string>
+    <string name="no_breathe" translatable="false">إذا كان الشخص لا يتنفس ، ابدأ في إعطاء الإنعاش القلبي الرئوي(CPR) على الفور</string>
+    <string name="snake_bite" translatable="false">لدغة الثعابين</string>
+    <string name="keep_calm" translatable="false">ساعد الشخص على الاستلقاء وإخباره بعدم التحرك. وفر له الراحة وحافظ على هدوءه</string>
+    <string name="help_NOW" translatable="false">إذا كان من الآمن القيام بذلك ، انظر الي الثعبان الذي عض الشخص كي تستطيع وصفه. لكن لا تقضي وقتًا في مطاردة الثعبان أو لا تحاول الإمساك به. لان الشخص المصاب يحتاج للمساعدة عاجلة الآن!</string>
+    <string name="forbids_snake" translatable="false">لا تمتص السم. لا تضع الأعشاب على الجرح. لا تقم بسداد الوريد</string>
+    <string name="remove_snake" translatable="false">أزل الخواتم ، والساعات ، والملابس الضيقة ، الخ. التي يرتديها الشخص على الطرف المصاب</string>
+    <string name="cover_snake_bite" translatable="false">غطي الجرح بقطعة قماش نظيفة. ثم ضع ضمادة ثابتة على جرح الطرف المصاب. في نهاية المطاف قم بعمل جبيرة إذا كنت قد تدربت على القيام بذلك من قبل</string>
+    <string name="transport_snake" translatable="false">رتب نقل عاجل إلى أقرب مركز للرعاية الصحية. يجب على الشخص ان لا يحرك الطرف بأكبر قدر ممكن</string>
+    <string name="cpr_snake" translatable="false">استمر في مراقبة حالة الشخص. إذا توقف عن التنفس ابدء الإنعاش القلبي الرئوي(CPR). إذا فقد الوعي لكنه لا يزال يتنفس ، ضعه في وضع الامان</string>
+    <string name="bee_wasp" translatable="false">لدغة ( نحلة، دبور)</string>
+    <string name="swarm" translatable="false">إذا كنت في المكان الذي يوجد فيه الدبور أو النحلة ، امشي مع الضحية بهدوء بعيدًا إلى منطقة أكثر أمانًا. إذا هُجمتم من سرب ، اهرب بأسرع ما يمكن ، وابحث عن مأوى (في داخل منزل ، في سيارة ، الخ …)</string>
+    <string name="fingernail" translatable="false">استخدم ظفرك لإزالة لدغة النحلة</string>
+    <string name="sting_wash" translatable="false">في نهاية المطاف اغسل اللدغة بالماء</string>
+    <string name="ice_sting" translatable="false">إذا كان لديك ثلج متاح ، يمكنك استخدامه لتبرد اللدغة : لف الثلج في قطعة قماش حتى لا يلمس الثلج البشرة مباشرة. لا تضعها على اللدغة أكثر من 20 دقيقة</string>
+    <string name="sting_reaction" translatable="false">راقب حالة الشخص.اسأل الشخص عن انواع الحساسية المعروفة لديه. بعض الناس قد يطورون رد فعل تحسسيه. يمكن أن يصبح هذا الوضع مهددًا للحياة بسرعة ويحتاج إلى مساعدة طبية فورية</string>
+    <string name="epilepsy" translatable="false">صرع</string>
+    <string name="remove_obejects" translatable="false">إزل أي شيء يمكن أن يؤذي الشخص</string>
+    <string name="reassure_bystanders" translatable="false">طمأن المارة</string>
+    <string name="dont_hold_down" translatable="false">لا تحاول الامساك بالشخص او تقيدة</string>
+    <string name="mushy" translatable="false">إذا أمكن ، ضع شيئًا طري تحت رأس الشخص</string>
+    <string name="free_breath" translatable="false">تأكد من أن الشخص يستطيع التنفس بحرية عن طريق تخفيف الملابس الضيقة</string>
+    <string name="dont_finger" translatable="false">لا تضع إصبعك في فم الشخص!</string>
+    <string name="dont_use_stick" translatable="false">لا تضع عصا خشبية أو أي شيء آخر في فم الشخص</string>
+    <string name="when_the_attack_stop" translatable="false">ضع الشخص في وضعة الآمن عند توقف الحاله</string>
+    <string name="stay" translatable="false">ابقَ مع الشخص حتى يتحسن</string>
+    <string name="no_feed" translatable="false">لا تعطي الشخص أي شيء للأكل أو الشراب</string>
+    <string name="no_users">there is no near users</string>
+    <string name="help_request_sent">Help Request Sent</string>
+    <string name="notification_deleted">Notification Deleted</string>
+    <string name="first_aid_page">First Aid</string>
+    <string name="stroke" translatable="false">سكتة دماغية</string>
+    <string name="mouth_drop" translatable="false">اطلب من الشخص أن يبتسم أو يظهر أسنانه. تحقق مما إذا كان الفم ملتويا أو متدليًا في أحد الأركان</string>
+    <string name="rise_arms">اطلب من الشخص رفع ذراعيه. تحقق مما إذا كان كل من الذراعين يتحركان إلى الأعلى أو ينخفض أحدهما أو ينجرف</string>
+    <string name="can_speak">اسأل الشخص عما يحدث. تحقق مما إذا كان يمكنه التحدث بوضوح أو لديه مشاكل في العثور على كلماته</string>
+    <string name="stroke_happens">السكتة الدماغية من المحتمل جدا عندما يكون الشخص لديه مشاكل مع عمل المذكورة في الأعلا</string>
+    <string name="setup_the_person">دع الشخص يجلس منتصبا. إذا لم يكن ذلك ممكنا ، ضعه في وضغية الآمن</string>
+    <string name="stay_calm">اطلب من الشخص أن يبقى هادئًا</string>
+    <string name="pref_ringtone_silent">silent</string>
+</resources>

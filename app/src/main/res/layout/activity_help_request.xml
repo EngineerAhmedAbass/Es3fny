@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="abass.com.firebasepushnotifications.abass.com.Es3fny.Request.HelpRequest"
+    android:background="@color/white">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+            <include
+                layout="@layout/my_action_bar"
+                android:id="@+id/app_bar"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="160dp"
+                    android:layout_height="47dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="18dp"
+                    android:gravity="left"
+                    android:paddingTop="10dp"
+                    android:text="@string/help_domain"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:ignore="RtlHardcoded" />
+                <Spinner
+                    android:id="@+id/domain_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="47dp"
+                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_toEndOf="@+id/text1"
+                    tools:ignore="RtlHardcoded" />
+
+            </RelativeLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="258dp"
+                android:layout_marginTop="20dp"
+                android:padding="25dp"
+                android:gravity="top|center"
+                android:layout_margin="20dp"
+                android:textColor="#000000"
+                android:textDirection="rtl"
+                android:id="@+id/text_help"
+                android:background="@drawable/textarea_bordered_rounded"
+                android:hint="@string/describe_the_patient_state"
+                tools:ignore="RtlHardcoded"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/send_request"
+                android:layout_width="138dp"
+                android:background="@drawable/rounded_button"
+                android:layout_height="wrap_content"
+                android:textColor="#09f"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="35dp"
+                android:text="@string/send_request"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

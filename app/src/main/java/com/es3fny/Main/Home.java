@@ -73,6 +73,7 @@ public class Home extends AppCompatActivity {
         Toast.makeText(this, R.string.back_to_exit, Toast.LENGTH_SHORT).show();
 
         new Handler().postDelayed(new Runnable() {
+
             @Override
             public void run() {
                 doubleBackToExitPressedOnce=false;

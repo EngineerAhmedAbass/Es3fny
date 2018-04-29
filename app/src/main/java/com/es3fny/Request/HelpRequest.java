@@ -11,6 +11,7 @@ import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -289,10 +290,15 @@ public class HelpRequest extends AppCompatActivity {
                                         Log.e("Out Distance ", "To " + temp_user.getName() + " " + Dist);
                                     }
                                 }
-                                progressDialog.hide();
-                                SendRequestBtn.setClickable(true);
-                                Toast.makeText(HelpRequest.this, R.string.help_request_sent, Toast.LENGTH_SHORT).show();
-                                GoToHome();
+                                new Handler().postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        progressDialog.hide();
+                                        SendRequestBtn.setClickable(true);
+                                        Toast.makeText(HelpRequest.this, R.string.help_request_sent, Toast.LENGTH_SHORT).show();
+                                        GoToHome();
+                                    }
+                                }, 5000);
                             } else {
                                 Log.d("Firebase", "Error getting documents: ", task.getException());
                             }

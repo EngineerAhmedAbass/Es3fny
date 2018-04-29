@@ -113,6 +113,7 @@ public class  LoginActivity extends AppCompatActivity {
 
     private void SendToMain() {
         Intent intent = new Intent(LoginActivity.this, Home.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
     }

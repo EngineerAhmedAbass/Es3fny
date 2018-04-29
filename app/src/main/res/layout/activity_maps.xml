@@ -14,7 +14,7 @@
 
     android:fitsSystemWindows="true"
 
-    tools:context="abass.firebasepushnotifications.Maps.MapsActivity">
+    tools:context="com.es3fny.Maps.MapsActivity">
 
     <fragment
 

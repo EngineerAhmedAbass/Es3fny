@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFF"
-    tools:context="abass.firebasepushnotifications.First_Aid.EMERGENCY"
+    tools:context=".First_Aid.EMERGENCY"
     >
 
     <ScrollView

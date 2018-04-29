@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context="abass.com.firebasepushnotifications.abass.com.Es3fny.Sos.SosActivity">
+    tools:context=".Sos.SosActivity">
     <include
         layout="@layout/my_action_bar"
         android:id="@+id/app_bar"

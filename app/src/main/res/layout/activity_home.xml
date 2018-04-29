@@ -5,7 +5,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context="abass.com.firebasepushnotifications.abass.com.Es3fny.Main.Home">
+    tools:context="com.es3fny.Main.Home">
 
     <include
         layout="@layout/my_action_bar"

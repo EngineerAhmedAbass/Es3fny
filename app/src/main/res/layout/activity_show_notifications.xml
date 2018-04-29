@@ -7,7 +7,7 @@
     android:layout_margin="0dp"
     android:screenOrientation="portrait"
     android:orientation="vertical"
-    tools:context="abass.com.firebasepushnotifications.abass.com.Es3fny.Main.ShowNotifications">
+    tools:context=".Main.ShowNotifications">
     <include
         layout="@layout/my_action_bar"
         android:id="@+id/app_bar"

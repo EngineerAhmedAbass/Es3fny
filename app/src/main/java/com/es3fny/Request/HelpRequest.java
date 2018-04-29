@@ -377,8 +377,7 @@ public class HelpRequest extends AppCompatActivity {
     }
 
     private void GoToHome() {
-        Intent HomeIntent = new Intent(this, Home.class);
-        startActivity(HomeIntent);
+        finish();
     }
 
     private void sendToLogin() {

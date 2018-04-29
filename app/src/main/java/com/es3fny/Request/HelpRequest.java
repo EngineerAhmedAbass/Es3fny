@@ -44,8 +44,10 @@ import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.location.LocationSettingsRequest;
 import com.google.android.gms.location.LocationSettingsResult;
 import com.google.android.gms.location.LocationSettingsStatusCodes;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentChange;
@@ -53,6 +55,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.Calendar;
@@ -248,7 +251,55 @@ public class HelpRequest extends AppCompatActivity {
                 @Override
                 public void onSuccess(DocumentReference documentReference) {
                     final String RequestID = documentReference.getId();
-                    mfirestore.collection("Users").addSnapshotListener(HelpRequest.this, new EventListener<QuerySnapshot>() {
+
+                    mfirestore.collection("Users").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                        @Override
+                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                    Log.d("Firebase", document.getId() + " => " + document.getData());
+                                    String user_id = document.getId();
+                                    User temp_user = document.toObject(User.class);
+                                    if (temp_user.getToken_id() == null || user_id.equals(mCurrentID)) {
+                                        continue;
+                                    }
+                                    if (temp_user.getLatitude() == null || temp_user.getLongtitude() == null) {
+                                        continue;
+                                    }
+                                    double Dist = distance(Double.parseDouble(MyBackgroundService.latitude), Double.parseDouble(MyBackgroundService.longtitude), Double.parseDouble(temp_user.getLatitude()), Double.parseDouble(temp_user.getLongtitude()));
+                                    if (Dist < 12) {
+                                        Log.e("In Distance ", "To " + temp_user.getName() + " " + Dist);
+                                        Map<String, Object> notificationMessage = new HashMap<>();
+                                        Date currentTime = Calendar.getInstance().getTime();
+                                        notificationMessage.put("message", Message);
+                                        notificationMessage.put("from", mCurrentID);
+                                        notificationMessage.put("user_name", mCurrentName);
+                                        notificationMessage.put("domain", Domain);
+                                        notificationMessage.put("longtitude", MyBackgroundService.longtitude);
+                                        notificationMessage.put("latitude", MyBackgroundService.latitude);
+                                        notificationMessage.put("requestID", RequestID);
+                                        notificationMessage.put("type", "Request");
+                                        notificationMessage.put("date", currentTime);
+                                        mfirestore.collection("Users/" + user_id + "/Notifications").add(notificationMessage).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                            @Override
+                                            public void onSuccess(DocumentReference documentReference) {
+                                            }
+                                        });
+                                    } else {
+                                        Log.e("Out Distance ", "To " + temp_user.getName() + " " + Dist);
+                                    }
+                                }
+                                progressDialog.hide();
+                                SendRequestBtn.setClickable(true);
+                                Toast.makeText(HelpRequest.this, R.string.help_request_sent, Toast.LENGTH_SHORT).show();
+                                GoToHome();
+                            } else {
+                                Log.d("Firebase", "Error getting documents: ", task.getException());
+                            }
+                        }
+                    });
+
+                   /* mfirestore.collection("Users").addSnapshotListener(HelpRequest.this, new EventListener<QuerySnapshot>() {
                         @Override
                         public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
                             for (DocumentChange doc : documentSnapshots.getDocumentChanges()) {
@@ -292,7 +343,7 @@ public class HelpRequest extends AppCompatActivity {
                             Toast.makeText(HelpRequest.this, R.string.help_request_sent, Toast.LENGTH_SHORT).show();
                             GoToHome();
                         }
-                    });
+                    });*/
                 }
             });
         }

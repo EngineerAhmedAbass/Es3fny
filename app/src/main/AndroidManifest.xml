@@ -64,7 +64,6 @@
             tools:ignore="InnerclassSeparator">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -83,7 +82,7 @@
             android:parentActivityName=".Main.ShowNotifications"
             tools:ignore="InnerclassSeparator">
             <intent-filter>
-                <action android:name="abass.com.firebasepushnotifications.TARGETNOTIFICATION" />
+                <action android:name="com.es3fny.TARGETNOTIFICATION" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

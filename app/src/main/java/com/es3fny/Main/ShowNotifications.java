@@ -102,7 +102,6 @@ public class ShowNotifications extends AppCompatActivity implements AdapterView.
             public void onRefresh() {
                 if(isNetworkAvailable()){
                     ReLoadNotifications();
-                    return;
                 }else{
                     Toast.makeText(ShowNotifications.this, R.string.no_internet, Toast.LENGTH_SHORT).show();
                 }
@@ -169,6 +168,7 @@ public class ShowNotifications extends AppCompatActivity implements AdapterView.
 
         notificationsRecyclerAdapter = new NotificationsRecyclerAdapter(this, notificationsList_Displayed);
 
+        mNotificationsListView.getRecycledViewPool().setMaxRecycledViews(0,50);
         mNotificationsListView.setHasFixedSize(true);
         mNotificationsListView.setLayoutManager(new LinearLayoutManager(this));
         mNotificationsListView.setAdapter(notificationsRecyclerAdapter);
@@ -324,7 +324,7 @@ public class ShowNotifications extends AppCompatActivity implements AdapterView.
         switch (Selected_sort) {
             case "Select Sorting Method":
             case "طريقة الترتيب":
-                Toast.makeText(this, R.string.choose_sort_method, Toast.LENGTH_SHORT).show();
+                Collections.sort(notificationsList_Displayed, new Custom_Distace_Comparator());
                 break;
             case "Ascending by Distance":
             case "من الاقرب الى الابعد":
@@ -385,4 +385,5 @@ public class ShowNotifications extends AppCompatActivity implements AdapterView.
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
+
 }

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,7 +34,7 @@ public class NotificationsRecyclerAdapter extends RecyclerView.Adapter<Notificat
 
     private List<MyNotification> notificationsList;
     private Context context;
-    FirebaseFirestore db;
+    private FirebaseFirestore db;
 
     public NotificationsRecyclerAdapter(Context context, List<MyNotification> notificationsList) {
         this.notificationsList = notificationsList;
@@ -48,6 +49,7 @@ public class NotificationsRecyclerAdapter extends RecyclerView.Adapter<Notificat
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
+        Log.e("OnBindViewHolder","hereeeeeeeeeeeeeeeee");
         holder.user_name_view.setText(notificationsList.get(position).getUser_name());
         holder.Domain_view.setText(notificationsList.get(position).getDomain());
         String Distance_Text = String.format("%.2f", notificationsList.get(position).getDistance())+context.getString(R.string.km);

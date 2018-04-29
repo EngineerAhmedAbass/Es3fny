@@ -63,7 +63,6 @@ import java.util.Map;
 import java.util.Vector;
 
 
-
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
 public class HelpRequest extends AppCompatActivity {
@@ -134,7 +133,6 @@ public class HelpRequest extends AppCompatActivity {
         mTitle.setText(getTitle());
 
         mAuth = FirebaseAuth.getInstance();
-        mCurrentID = MyBackgroundService.mCurrentID;
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 
         mGoogleApiClient = new GoogleApiClient.Builder(HelpRequest.this)
@@ -157,6 +155,7 @@ public class HelpRequest extends AppCompatActivity {
                 if (isLocationServiceEnabled()) {
                     if (isNetworkAvailable()) {
                         progressDialog.show();
+                        mCurrentID = mAuth.getCurrentUser().getUid();
                         SendNotifications();
                     } else {
                         SendRequestBtn.setClickable(true);
@@ -236,8 +235,69 @@ public class HelpRequest extends AppCompatActivity {
             progressDialog.hide();
             SendRequestBtn.setClickable(true);
             Toast.makeText(HelpRequest.this, R.string.enter_help_request_message, Toast.LENGTH_SHORT).show();
-            return;
+        } else {
+            Map<String, Object> RequestMessage = new HashMap<>();
+            Date currentTime = Calendar.getInstance().getTime();
+            RequestMessage.put("message", Message);
+            RequestMessage.put("from", mCurrentID);
+            RequestMessage.put("status", "waiting");
+            RequestMessage.put("longtitude", MyBackgroundService.longtitude);
+            RequestMessage.put("latitude", MyBackgroundService.latitude);
+            RequestMessage.put("date", currentTime);
+            mfirestore.collection("Requests").add(RequestMessage).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                @Override
+                public void onSuccess(DocumentReference documentReference) {
+                    final String RequestID = documentReference.getId();
+                    mfirestore.collection("Users").addSnapshotListener(HelpRequest.this, new EventListener<QuerySnapshot>() {
+                        @Override
+                        public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
+                            for (DocumentChange doc : documentSnapshots.getDocumentChanges()) {
+                                if (doc.getType() == DocumentChange.Type.ADDED) {
+                                    String user_id = doc.getDocument().getId();
+                                    User temp_user = doc.getDocument().toObject(User.class);
+
+                                    if (temp_user.getToken_id() == null || user_id.equals(mCurrentID)) {
+                                        continue;
+                                    }
+                                    if (temp_user.getLatitude() == null || temp_user.getLongtitude() == null) {
+                                        continue;
+                                    }
+                                    double Dist = distance(Double.parseDouble(MyBackgroundService.latitude), Double.parseDouble(MyBackgroundService.longtitude), Double.parseDouble(temp_user.getLatitude()), Double.parseDouble(temp_user.getLongtitude()));
+                                    if (Dist < 12) {
+                                        Log.e("In Distance ", "To " + temp_user.getName() + " " + Dist);
+                                        Map<String, Object> notificationMessage = new HashMap<>();
+                                        Date currentTime = Calendar.getInstance().getTime();
+                                        notificationMessage.put("message", Message);
+                                        notificationMessage.put("from", mCurrentID);
+                                        notificationMessage.put("user_name", mCurrentName);
+                                        notificationMessage.put("domain", Domain);
+                                        notificationMessage.put("longtitude", MyBackgroundService.longtitude);
+                                        notificationMessage.put("latitude", MyBackgroundService.latitude);
+                                        notificationMessage.put("requestID", RequestID);
+                                        notificationMessage.put("type", "Request");
+                                        notificationMessage.put("date", currentTime);
+                                        mfirestore.collection("Users/" + user_id + "/Notifications").add(notificationMessage).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                                            @Override
+                                            public void onSuccess(DocumentReference documentReference) {
+                                            }
+                                        });
+                                    } else {
+                                        Log.e("Out Distance ", "To " + temp_user.getName() + " " + Dist);
+                                    }
+                                }
+
+                            }
+                            progressDialog.hide();
+                            SendRequestBtn.setClickable(true);
+                            Toast.makeText(HelpRequest.this, R.string.help_request_sent, Toast.LENGTH_SHORT).show();
+                            GoToHome();
+                        }
+                    });
+                }
+            });
         }
+
+/*
         mfirestore.collection("Users").addSnapshotListener(HelpRequest.this, new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
@@ -267,7 +327,6 @@ public class HelpRequest extends AppCompatActivity {
                     SendRequestBtn.setClickable(true);
                     Toast.makeText(HelpRequest.this, R.string.no_users, Toast.LENGTH_SHORT).show();
                 } else {
-                    //*******************************************************************************//
                     Map<String, Object> RequestMessage = new HashMap<>();
                     Date currentTime = Calendar.getInstance().getTime();
                     RequestMessage.put("message", Message);
@@ -314,7 +373,7 @@ public class HelpRequest extends AppCompatActivity {
                 }
             }
         });
-
+*/
     }
 
     private void GoToHome() {

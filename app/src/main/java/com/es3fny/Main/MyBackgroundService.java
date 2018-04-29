@@ -65,6 +65,7 @@ public class MyBackgroundService extends Service implements ConnectivityReceiver
         return START_STICKY;
     }
 
+
     @Override
     public void onCreate() {
         Log.e(TAG, "onCreate");
@@ -77,11 +78,11 @@ public class MyBackgroundService extends Service implements ConnectivityReceiver
             Type type = new TypeToken<Location>() {
             }.getType();
             mCurrentlocation = gson.fromJson(json, type);
-            mCurrentID = settings.getString("mCurrentID", "null");
+            mCurrentID = settings.getString("mCurrentID", mAuth.getCurrentUser().getUid());
             longtitude = settings.getString("longtitude", "null");
             latitude = settings.getString("latitude", "null");
             Updated = settings.getBoolean("Updated", false);
-            Log.e("Test",longtitude+" "+latitude);
+            Log.e("Test",longtitude+" "+latitude+" "+mAuth.getCurrentUser().getUid());
             if (mCurrentlocation != null) {
                 Log.e("Current Location ", mCurrentlocation.getLatitude() + " " + mCurrentlocation.getLongitude());
             }

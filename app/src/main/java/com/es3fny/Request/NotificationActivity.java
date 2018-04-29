@@ -289,7 +289,7 @@ public class NotificationActivity extends AppCompatActivity {
             finish();
         }else{
             finish();
-            startActivity(new Intent(this,getParent().getClass()));
+            startActivity(new Intent(this,ShowNotifications.class));
         }
     }
 

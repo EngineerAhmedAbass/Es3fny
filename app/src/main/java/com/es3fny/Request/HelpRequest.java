@@ -253,7 +253,7 @@ public class HelpRequest extends AppCompatActivity {
                             continue;
                         }
                         double Dist = distance(Double.parseDouble(MyBackgroundService.latitude), Double.parseDouble(MyBackgroundService.longtitude), Double.parseDouble(temp_user.getLatitude()), Double.parseDouble(temp_user.getLongtitude()));
-                        if (Dist < 10) {
+                        if (Dist < 12) {
                             Log.e("In Distance ", "To " + temp_user.getName() + " " + Dist);
                             SentUsers.add(user_id);
                         } else {

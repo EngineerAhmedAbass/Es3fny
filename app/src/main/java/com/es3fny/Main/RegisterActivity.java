@@ -65,6 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText password;
     private EditText phone;
     private EditText city;
+    private EditText street;
     private EditText nid;
     private FirebaseAuth mAuth;
     private FirebaseFirestore mFirestore;
@@ -83,7 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
         password = findViewById(R.id.password);
         phone =  findViewById(R.id.Phone);
         city =  findViewById(R.id.city);
-        EditText street = findViewById(R.id.street);
+        street = findViewById(R.id.street);
         nid = findViewById(R.id.NID);
 
         mGoogleApiClient = new GoogleApiClient.Builder(RegisterActivity.this)
@@ -131,7 +132,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void Register() {
-        if (longtitude == null || latitude == null) {
+        if (MyBackgroundService.longtitude == null || MyBackgroundService.latitude == null) {
             Toast.makeText(RegisterActivity.this, R.string.something_went_wrong, Toast.LENGTH_SHORT).show();
             return;
         }
@@ -140,7 +141,7 @@ public class RegisterActivity extends AppCompatActivity {
         myPassword = password.getText().toString();
         Myphone = phone.getText().toString();
         MyCity = city.getText().toString();
-        MyStreet = city.getText().toString();
+        MyStreet = street.getText().toString();
         MyNID = nid.getText().toString();
         day = datePicker.getDayOfMonth();
         month = (datePicker.getMonth() + 1);

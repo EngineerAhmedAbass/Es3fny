@@ -166,9 +166,6 @@ public class NotificationActivity extends AppCompatActivity {
                 showSettingDialog();
             }
 
-
-
-
             //new GetStatus().execute(Integer.parseInt(request_id));
 
             sendRespond.setOnClickListener(new View.OnClickListener() {

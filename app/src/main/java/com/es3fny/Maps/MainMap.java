@@ -39,7 +39,7 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
     private CheckBox hospital;
     private CheckBox police;
     private CheckBox pharmacy;
-    private ArrayList<String> Selected_Date;
+    private ArrayList<String> Selected_Data;
     private boolean Language_Changed;
 
     @Override
@@ -48,7 +48,7 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_map);
         Language_Changed = getIntent().getBooleanExtra("Language_Changed", false);
-        Selected_Date = new ArrayList<String>();
+        Selected_Data = new ArrayList<String>();
         // Spinner element
         //final Spinner spinner = (Spinner) findViewById(R.id.spinner);
         Button button = findViewById(R.id.button);
@@ -121,7 +121,7 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
                 if (Selected_Date.size() == 0) {
                     Toast.makeText(MainMap.this, R.string.places_error, Toast.LENGTH_SHORT).show();
                 } else {
-                    intent.putStringArrayListExtra("data", Selected_Date);
+                    intent.putStringArrayListExtra("data", Selected_Data);
                     intent.putExtra("Distance", Data);
                     startActivity(intent);
                 }
@@ -137,24 +137,24 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
     }
 
     public void onCheckBoxClicked(View view) {
-        Selected_Date.clear();
+        Selected_Data.clear();
         boolean checked = ((CheckBox) view).isChecked();
         if (hospital.isChecked()) {
-            Selected_Date.add("hospital");
+            Selected_Data.add("hospital");
         } else {
-            Selected_Date.remove("hospital");
+            Selected_Data.remove("hospital");
         }
         if (police.isChecked()) {
-            Selected_Date.add("police");
+            Selected_Data.add("police");
         } else {
-            Selected_Date.remove("police");
+            Selected_Data.remove("police");
         }
         if (pharmacy.isChecked()) {
-            Selected_Date.add("pharmacy");
+            Selected_Data.add("pharmacy");
         } else {
-            Selected_Date.remove("pharmacy");
+            Selected_Data.remove("pharmacy");
         }
-        Toast.makeText(this, Selected_Date.toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, Selected_Data.toString(), Toast.LENGTH_SHORT).show();
     }
 
     @Override

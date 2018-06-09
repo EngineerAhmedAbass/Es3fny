@@ -176,6 +176,7 @@
     <string name="remove">ازالة</string>
     <string name="pref_header_general">عام</string>
     <string name="pref_header_notifications">الاشعارات</string>
+    <string name="places_error">يجب ان تختار علي الاقل مكان واحد</string>
 
     <!-- **************************************** -->
 

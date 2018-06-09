@@ -29,8 +29,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-
-
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
 
@@ -39,7 +37,7 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
     String Data = "3";
     private Toolbar toolbar;
     private CheckBox hospital;
-    private CheckBox police ;
+    private CheckBox police;
     private CheckBox pharmacy;
     private ArrayList<String> Selected_Date;
     private boolean Language_Changed;
@@ -49,7 +47,7 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
         requestPermission();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_map);
-        Language_Changed = getIntent().getBooleanExtra("Language_Changed",false);
+        Language_Changed = getIntent().getBooleanExtra("Language_Changed", false);
         Selected_Date = new ArrayList<String>();
         // Spinner element
         //final Spinner spinner = (Spinner) findViewById(R.id.spinner);
@@ -111,7 +109,7 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String dataString="";
+                String dataString = "";
                 Intent intent = new Intent(MainMap.this, MapsActivity.class);
                 /*for(int i=0 ; i < Selected_Date.size();i++){
                     if(i==Selected_Date.size()-1){
@@ -120,9 +118,13 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
                         dataString+=Selected_Date.get(i)+"|";
                     }
                 }*/
-                intent.putStringArrayListExtra("data",Selected_Date);
-                intent.putExtra("Distance", Data);
-                startActivity(intent);
+                if (Selected_Date.size() == 0) {
+                    Toast.makeText(MainMap.this, R.string.places_error, Toast.LENGTH_SHORT).show();
+                } else {
+                    intent.putStringArrayListExtra("data", Selected_Date);
+                    intent.putExtra("Distance", Data);
+                    startActivity(intent);
+                }
             }
         });
     }
@@ -152,7 +154,7 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
         } else {
             Selected_Date.remove("pharmacy");
         }
-        Toast.makeText(this, Selected_Date.toString(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, Selected_Date.toString(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -168,24 +170,24 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
                 startActivity(settings);
                 break;
             case R.id.Language:
-                Language_Changed =true;
-                if (item.getTitle().equals("English")){
+                Language_Changed = true;
+                if (item.getTitle().equals("English")) {
                     load = "en";
-                }else if (item.getTitle().equals("عربي")){
+                } else if (item.getTitle().equals("عربي")) {
                     load = "ar";
                 }
                 SharedPreferences defaultSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
                 SharedPreferences.Editor editor = defaultSharedPreferences.edit();
-                editor.putString("Language",load);
+                editor.putString("Language", load);
                 editor.apply();
                 Locale locale = new Locale(load);
                 Locale.setDefault(locale);
                 Configuration config = new Configuration();
                 config.locale = locale;
-                getResources().updateConfiguration(config,getResources().getDisplayMetrics());
+                getResources().updateConfiguration(config, getResources().getDisplayMetrics());
                 finish();
                 Intent intent = getIntent();
-                intent.putExtra("Language_Changed",Language_Changed);
+                intent.putExtra("Language_Changed", Language_Changed);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(getIntent());
             default:
@@ -207,8 +209,8 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        if(Language_Changed){
-            Intent intent = new Intent(this,Home.class);
+        if (Language_Changed) {
+            Intent intent = new Intent(this, Home.class);
             startActivity(intent);
         }
         finish();

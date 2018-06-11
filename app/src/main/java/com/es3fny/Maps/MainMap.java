@@ -118,7 +118,7 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
                         dataString+=Selected_Date.get(i)+"|";
                     }
                 }*/
-                if (Selected_Date.size() == 0) {
+                if (Selected_Data.size() == 0) {
                     Toast.makeText(MainMap.this, R.string.places_error, Toast.LENGTH_SHORT).show();
                 } else {
                     intent.putStringArrayListExtra("data", Selected_Data);

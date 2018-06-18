@@ -49,6 +49,7 @@ public class  LoginActivity extends AppCompatActivity {
         mPassword = findViewById(R.id.edpassword);
         Button mLoginBtn = findViewById(R.id.btnLogin);
         Button mRegPageBtn = findViewById(R.id.btnLinkToRegisterScreen);
+        Button mSkipBtn = findViewById(R.id.btnSkip);
 
         mAuth = FirebaseAuth.getInstance();
         mFirestore = FirebaseFirestore.getInstance();
@@ -57,6 +58,14 @@ public class  LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mSkipBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, SkipHome.class);
                 startActivity(intent);
             }
         });

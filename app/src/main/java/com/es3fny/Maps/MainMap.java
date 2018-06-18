@@ -23,6 +23,7 @@ import android.widget.Toast;
 import com.es3fny.Main.Home;
 import com.es3fny.Main.SettingsActivity;
 import com.es3fny.Main.ShowNotifications;
+import com.es3fny.Main.SkipHome;
 import com.es3fny.R;
 
 import java.util.ArrayList;

@@ -20,7 +20,6 @@ import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.es3fny.Main.Home;
 import com.es3fny.Main.LoginActivity;
 import com.es3fny.Main.MyBackgroundService;
 import com.es3fny.Main.SettingsActivity;

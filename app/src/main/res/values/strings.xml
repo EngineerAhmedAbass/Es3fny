@@ -306,4 +306,11 @@
     <string name="stay_calm">اطلب من الشخص أن يبقى هادئًا</string>
     <string name="pref_ringtone_silent">silent</string>
     <string name="places_error">You Must Select at least One Place</string>
+    <string name="poisoning">تسمم</string>
+    <string name="ur_safety_first">أولا أمن سلامتك الخاصة. بعد ذلك ، أمن سلامة الشخص المصاب</string>
+    <string name="hand_protect">غطي يديك. بأستخدام القفازات أو كيس من البلاستيك</string>
+    <string name="find_out_poison">إذا أمكن ، اكتشف ما هو السم الذي تم ابتلاعه أو حقنه أو استنشاقه أو لامس جلد الشخص. ومع ذلك ، لا تضع نفسك في أي خطر! تجنب الاتصال مع السم</string>
+    <string name="poison_instructions">اتصل بمركز مكافحة السموم ، مستشفى قريب أو مركز للرعاية الصحية للحصول على التعليمات. لا تعطي الشخص أي شيء للأكل أو الشراب دون ان يخبروك بذلك. لا تعطي الشخص الحليب أو الماء إلا إذا طلبو منك القيام بذلك</string>
+    <string name="swallowed_poison">إذا كان السم قد ابتلع والشخص واعية ويتنفس ، اطلب منه الاستلقاء على جانبه الأيسر. استمر في مراقبته</string>
+    <string name="powder_poison">في حالة ملامسة المواد الكيماوية الجافة أو المساحيق ، امسحها جيداً ثم اغسل المنطقة بالماء</string>
 </resources>

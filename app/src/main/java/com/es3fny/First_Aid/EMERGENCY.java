@@ -155,6 +155,15 @@ public class EMERGENCY extends Fragment {
             }
         });
 
+        ImageButton stroke = view.findViewById(R.id.ImageButton16);
+        stroke.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EMERGENCY.this.getActivity(), stroke.class);
+                startActivity(intent);
+            }
+        });
+
         ImageButton epilepsy = view.findViewById(R.id.ImageButton18);
         epilepsy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -163,11 +172,12 @@ public class EMERGENCY extends Fragment {
                 startActivity(intent);
             }
         });
-        ImageButton stroke = view.findViewById(R.id.ImageButton16);
-        stroke.setOnClickListener(new View.OnClickListener() {
+
+        ImageButton poisoning = view.findViewById(R.id.ImageButton20);
+        poisoning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EMERGENCY.this.getActivity(), stroke.class);
+                Intent intent = new Intent(EMERGENCY.this.getActivity(), poisoning.class);
                 startActivity(intent);
             }
         });

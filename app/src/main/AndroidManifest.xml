@@ -115,7 +115,7 @@
             android:name=".Request.bloodDonationRequest"
             android:parentActivityName=".Main.Home"
             android:screenOrientation="portrait"
-            tools:ignore="InnerclassSeparator"></activity>
+            tools:ignore="InnerclassSeparator" />
         <activity
             android:name=".Maps.MapsActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -149,7 +149,7 @@
             android:parentActivityName=".Main.Home"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"
-            tools:ignore="InnerclassSeparator"></activity>
+            tools:ignore="InnerclassSeparator" />
         <activity
             android:name=".First_Aid.Burn"
             android:parentActivityName=".First_Aid.MainActivity"
@@ -235,6 +235,15 @@
             android:parentActivityName=".Main.Home"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".First_Aid.poisoning"
+            android:parentActivityName=".First_Aid.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".First_Aid.Fainting"
+            android:parentActivityName=".First_Aid.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator"/>
     </application>
 
 </manifest>

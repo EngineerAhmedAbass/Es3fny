@@ -48,7 +48,7 @@ public class SkipHome extends AppCompatActivity {
             }
         }, 2000);
     }
-
+    int Type = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +56,10 @@ public class SkipHome extends AppCompatActivity {
         setContentView(R.layout.activity_skip_home);
         Places_BTN = findViewById(R.id.Places_BTN);
         First_Aid_BTN = findViewById(R.id.First_Aid_BTN);
+        Bundle extra =  getIntent().getExtras();
+        if(extra != null ){
+            Type = extra.getInt("type");
+        }
         Toolbar toolbar = findViewById(R.id.app_bar);
         TextView mTitle =  toolbar.findViewById(R.id.toolbar_title);
         mTitle.setText(R.string.home);
@@ -65,6 +69,7 @@ public class SkipHome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent MapsIntnet = new Intent(SkipHome.this, MainMap.class);
+                MapsIntnet.putExtra("type",1);
                 startActivity(MapsIntnet);
             }
         });
@@ -72,6 +77,7 @@ public class SkipHome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent FirstAidIntnet = new Intent(SkipHome.this, MainActivity.class);
+                FirstAidIntnet.putExtra("type",1);
                 startActivity(FirstAidIntnet);
             }
         });

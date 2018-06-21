@@ -261,7 +261,12 @@ public class bloodDonationRequest extends AppCompatActivity {
                                 if (temp_user.getLatitude() == null || temp_user.getLongtitude() == null) {
                                     continue;
                                 }
-                                double Dist = distance(Double.parseDouble(MyBackgroundService.latitude), Double.parseDouble(MyBackgroundService.longtitude), Double.parseDouble(temp_user.getLatitude()), Double.parseDouble(temp_user.getLongtitude()));
+                                String temUserLong = temp_user.longtitude;
+                                String temUserLat= temp_user.latitude;
+                                if (temUserLat.equals("null") || temUserLong.equals("null")){
+                                    continue;
+                                }
+                                double Dist = distance(Double.parseDouble(MyBackgroundService.latitude), Double.parseDouble(MyBackgroundService.longtitude), Double.parseDouble(temUserLat), Double.parseDouble(temUserLong));
                                 if (Dist < 12) {
                                     Log.e("In Distance ", "To " + temp_user.getName() + " " + Dist);
                                     Map<String, Object> notificationMessage = new HashMap<>();

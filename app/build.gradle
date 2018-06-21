@@ -13,7 +13,7 @@ repositories {
 }
 android {
     useLibrary 'org.apache.http.legacy'
-    compileSdkVersion 26
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.es3fny"
         minSdkVersion 19

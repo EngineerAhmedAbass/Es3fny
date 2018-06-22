@@ -92,7 +92,7 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
             public void onProgressChanged(SeekBar seekBar, int progress,
                                           boolean fromUser) {
                 // TODO Auto-generated method stub
-                seekBarValue.setText("within " + String.valueOf(progress) + " KM");
+                seekBarValue.setText("Within " + String.valueOf(progress) + " KM");
                 Data = String.valueOf(progress);
             }
 
@@ -201,7 +201,7 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         // On selecting a spinner item
         String item = parent.getItemAtPosition(position).toString();
-        seekBarValue.setText(" within " + String.valueOf(Data) + " KM");
+        seekBarValue.setText("Within " + String.valueOf(Data) + " KM");
         // Showing selected spinner item
         //Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
 

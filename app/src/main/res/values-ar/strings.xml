@@ -21,10 +21,10 @@
     </string-array>
     <string-array name="sorting_method">
         <item>طريقة الترتيب</item>
-        <item>من الاقرب الى الابعد</item>
-        <item>من الابعد الى الاقرب</item>
-        <item>من الاقدم الى الاحدث</item>
-        <item>من الاحدث الى الاقدم</item>
+        <item>المسافة من الاقرب الى الابعد</item>
+        <item>المسافة من الابعد الى الاقرب</item>
+        <item>الوقت من الاقدم الى الاحدث</item>
+        <item>الوقت من الاحدث الى الاقدم</item>
     </string-array>
     <string name="title_activity_splash">Splash</string>
     <string name="title_activity_settings">الاعدادات</string>
@@ -72,24 +72,24 @@
 
 <!-- **************************************** -->
     <string name="hello_world">مرحبا</string>
-    <string name="instruction1">لتتمكن من استخدام هذه الميزة ، يرجى التفعيل اولا-</string>
-    <string name="instruction2">إضافة جهة اتصال واحدة على الأقل وعلى الأكثر3-</string>
-    <string name="instruction3">ستحتوي رسالة SOS على موقعك الحالي بالإضافة إلى الرسالة النصية التالية: \"الرجاء مساعدتي\"</string>
+    <string name="instruction1">- لتتمكن من استخدام هذه الميزة, يرجي التفعيل أولا.</string>
+    <string name="instruction2">- أضف علي الأقل جهة اتصال واحدة, و علي الأكثر ثلاث جهات اتصال.</string>
+    <string name="instruction3">- ستحتوي رسالة الSOS علي موقعك الحالي بالإضافة الي الرسالة النصية التالية \’أرجوك ساعدني\’.</string>
     <string name="send_sos_message_btn">ارسل رسالةالمساعدة</string>
     <string name="add_edit_contacts_btn">اضافة/تعديل جهات الاتصال</string>
     <string name="add_contact_btn">اضافة جهة اتصال</string>
     <string name="sending_to">ارسال الى :</string>
     <string name="send_btn">ارسال</string>
-    <string name="sos_deactivate">إلغاء تنشيط رسالة SOS</string>
-    <string name="sos_activate">تنشيط رسالة SOS</string>
+    <string name="sos_deactivate">إلغاء تنشيط رسالة SOS!</string>
+    <string name="sos_activate">تنشيط رسالة SOS!</string>
     <string name="name">الاسم:</string>
     <string name="home">الرئيسية</string>
     <string name="blood_type">فصيلة الدم</string>
-    <string name="describe_the_patient_state">"من فضلك صف المعلومات عن الطلب "</string>
+    <string name="describe_the_patient_state">معلومات الطلب...</string>
     <string name="send_request">ارسال الطلب</string>
     <string name="help_domain">مجال الطلب</string>
     <string name="request_blood">طلب فصيلة الدم</string>
-    <string name="sos_message">رسالة استغاسة</string>
+    <string name="sos_message">رسالة استغاثة</string>
     <string name="places">اقرب الاماكن</string>
     <string name="first_aid_tips">الاسعافات الاولية</string>
     <string name="email">البريد الالكترونى</string>
@@ -98,85 +98,85 @@
     <string name="skip">تخطى</string>
     <string name="hospital">المستشفيات</string>
     <string name="police">مركز الشرطة</string>
-    <string name="within_3_km">within 3 KM</string>
+    <string name="within_3_km">في نطاق 3كم</string>
     <string name="find">بحث</string>
     <string name="status">الحالة</string>
     <string name="request_from">الطلب من</string>
-    <string name="sender_name">اسم الراسل</string>
+    <string name="sender_name">اسم المرسل</string>
     <string name="domain">المجال</string>
     <string name="address">العنوان</string>
     <string name="respond">استجابة</string>
-    <string name="full_name">"الاسم "</string>
+    <string name="full_name">الاسم الكامل</string>
     <string name="city">المدينة</string>
     <string name="street">شارع</string>
     <string name="national_id">الرقم القومى</string>
-    <string name="go_to_login">الذهاب الى الدخول</string>
+    <string name="go_to_login">تسجيل الدخول</string>
     <string name="help_request">طلب المساعدة</string>
     <string name="donor">تبرع بالدم</string>
-    <string name="responces">الردود</string>
+    <string name="responces">الاستجابات</string>
     <string name="toolbar_title">Toolbar Title</string>
     <string name="distance">المسافة</string>
     <string name="user_name">اسم المستخدم</string>
-    <string name="blood_request_success">تم ارسال طلب التبرع بالدم</string>
-    <string name="permission_denied">عذرا الاذن مرفوض</string>
-    <string name="location_enabled">تم تفعيل الموقع</string>
-    <string name="no_internet">لايوجد اتصال بالانترنت</string>
-    <string name="location_disabled">الموقع غير فعال</string>
-    <string name="requesting">جارى الطلب</string>
-    <string name="please_wait_till_help_request">برجاء الانتظار حتى يتم ارسال طلب المساعدة</string>
-    <string name="please_wait_till_blood_request">برجاء الانتظار حتى يتم ارسال طلب التبرع بالدم</string>
-    <string name="open_location_first">يرجى فتح الموقع اولا</string>
-    <string name="enter_password">يجب ادخال الرقم السرى</string>
+    <string name="blood_request_success">تم ارسال طلب التبرع بالدم!</string>
+    <string name="permission_denied">عذرا الاذن مرفوض!</string>
+    <string name="location_enabled">تم تفعيل الموقع!</string>
+    <string name="no_internet">لايوجد اتصال بالانترنت!</string>
+    <string name="location_disabled">الموقع غير فعال!</string>
+    <string name="requesting">جارى الطلب...</string>
+    <string name="please_wait_till_help_request">برجاء الانتظار حتى يتم ارسال طلب المساعدة!</string>
+    <string name="please_wait_till_blood_request">برجاء الانتظار حتى يتم ارسال طلب التبرع بالدم!</string>
+    <string name="open_location_first">فعَل الموقع اولا!</string>
+    <string name="enter_password">يجب ادخال الرقم السرى!</string>
     <string name="welcome">"مرحبا "</string>
     <string name="the_location">الموقع</string>
     <string name="response">استجابة</string>
     <string name="respond_message">انا جاهز للمساعدة</string>
     <string name="waiting">فى انتظار المساعدة</string>
     <string name="closed">تم اغلاق الطلب</string>
-    <string name="respond_sent">تم ارسال الاستجابة</string>
+    <string name="respond_sent">تم ارسال الاستجابة!</string>
     <string name="km">كم</string>
-    <string name="wait_till_notification_loads">برجاء الانتظار حتى يتم تحميل الاشعار</string>
-    <string name="something_went_wrong">حدث خطا فى تحديد الموقع برجاء المحاولة مرة اخرى</string>
+    <string name="wait_till_notification_loads">برجاء الانتظار حتى يتم تحميل الاشعار!</string>
+    <string name="something_went_wrong">حدث خطا فى تحديد الموقع برجاء المحاولة مرة اخرى!</string>
     <string name="registering">يتم التسجيل</string>
-    <string name="wait_till_register_complete">برجاء الانتظار حتى يكتمل التسجيل</string>
-    <string name="must_enter_name">يجب ادخال الاسم</string>
-    <string name="must_enter_email">يجب ادخال البريد الالكترونى</string>
-    <string name="must_enter_password">يجب ادخال كلمة المرور</string>
-    <string name="must_enter_NID">يجب ادخال الرقم القومى</string>
-    <string name="must_enter_valid_NID">يجب ادخال رقم قومى صحيح</string>
-    <string name="invalid_NID">الرقم القومى غير صحيح</string>
-    <string name="young_for_register">"يجب ان تكون اكبر من 19 عام "</string>
-    <string name="add_contact_first">برجاء ادخل جهة اتصال اولا</string>
-    <string name="sms_sent">تم ارسال الرسالة</string>
-    <string name="sms_failed">فشل الارسال برجاء المحاولة لاحقا</string>
-    <string name="add_3_contacts">عذرا لايمكن ادخال اكثر من 3 جهات اتصال</string>
-    <string name="contact_deleted_success">تم حذف جهة الاتصال</string>
-    <string name="contact_added_success">تم اضافة جهة الاتصال</string>
+    <string name="wait_till_register_complete">برجاء الانتظار حتى يكتمل التسجيل!</string>
+    <string name="must_enter_name">يجب ادخال الاسم!</string>
+    <string name="must_enter_email">يجب ادخال البريد الالكترونى!</string>
+    <string name="must_enter_password">يجب ادخال كلمة المرور!</string>
+    <string name="must_enter_NID">يجب ادخال الرقم القومى!</string>
+    <string name="must_enter_valid_NID">يجب ادخال رقم قومى صحيح!</string>
+    <string name="invalid_NID">الرقم القومى غير صحيح!</string>
+    <string name="young_for_register">يجب ان تكون اكبر من 19 عام!</string>
+    <string name="add_contact_first">برجاء ادخل جهة اتصال اولا!</string>
+    <string name="sms_sent">تم ارسال الرسالة!</string>
+    <string name="sms_failed">فشل الارسال برجاء المحاولة لاحقا!</string>
+    <string name="add_3_contacts">عذرا لايمكن ادخال اكثر من 3 جهات اتصال!</string>
+    <string name="contact_deleted_success">تم حذف جهة الاتصال بنجاح!</string>
+    <string name="contact_added_success">تم اضافة جهة الاتصال بنجاح!</string>
     <string name="back_btn">عودة</string>
     <string name="phone_number">رقم الموبيل</string>
     <string name="request_help">طلب مساعدة</string>
     <string name="go_to_register">عمل حساب</string>
     <string name="pharmacy">الصيدليات</string>
-    <string name="description">المواصفات</string>
+    <string name="description">الوصف</string>
     <string name="date_of_birth">تاريخ الميلاد</string>
     <string name="register">تسجيل</string>
-    <string name="enter_help_request_message">برجاء ادخال نص الطلب</string>
-    <string name="enter_email">يجب كتابة البريد الالكترونى</string>
+    <string name="enter_help_request_message">نص طلب المساعدة...</string>
+    <string name="enter_email">يجب كتابة البريد الالكترونى!</string>
     <string name="choose_sort_method">برجاء اختيار طريقة الترتيب</string>
-    <string name="activate_sos">برجاء تفعيل رسالة الاستغاثة اولا</string>
-    <string name="loading">يتم التحميل</string>
-    <string name="back_to_exit">للخروج اضغط مرة اخرى</string>
+    <string name="activate_sos">برجاء تفعيل رسالة الاستغاثة اولا!</string>
+    <string name="loading">يتم التحميل...</string>
+    <string name="back_to_exit">للخروج اضغط مرة اخرى!</string>
     <string name="description_title">التفاصيل</string>
     <string name="address_title">العنوان</string>
     <string name="language">Englishُ</string>
-    <string name="help_request_sent">تم ارسال طلب المساعدة</string>
-    <string name="notification_deleted">تم مسح الاشعار</string>
-    <string name="no_users">عفوا لايوجد احد قريب للمساعدة</string>
+    <string name="help_request_sent">تم ارسال طلب المساعدة!</string>
+    <string name="notification_deleted">تم مسح الاشعار!</string>
+    <string name="no_users">عفوا لايوجد احد قريب للمساعدة!</string>
     <string name="first_aid_page">الاسعافات الاوليه</string>
     <string name="remove">ازالة</string>
     <string name="pref_header_general">عام</string>
     <string name="pref_header_notifications">الاشعارات</string>
-    <string name="places_error">يجب ان تختار علي الاقل مكان واحد</string>
+    <string name="places_error">يجب ان تختار علي الاقل اختيار واحد!</string>
 
     <!-- **************************************** -->
 

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Es3fny</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -10,7 +10,7 @@
     <string-array name="Requests_Domains">
         <item>Heart</item>
         <item>Burns</item>
-        <item>Pressure and Sugar</item>
+        <item>Pressure and Diabetes</item>
         <item>Coma</item>
         <item>First Aid</item>
     </string-array>
@@ -21,11 +21,11 @@
         <item>O</item>
     </string-array>
     <string-array name="sorting_method">
-        <item>Select Sorting Method</item>
-        <item>Ascending by Distance</item>
-        <item>Descending by Distance</item>
-        <item>Ascending by Time</item>
-        <item>Descending by Time</item>
+        <item>Select sorting method</item>
+        <item>Distance Ascending</item>
+        <item>Distance Descending</item>
+        <item>Time Ascending</item>
+        <item>Time Descending</item>
     </string-array>
     <string name="title_activity_splash">Splash</string>
     <string name="dummy_button" translatable="false">Dummy Button</string>
@@ -52,9 +52,9 @@
 
     <!-- **************************************** -->
     <string name="hello_world">Hello World</string>
-    <string name="instruction1">- To be able to use this feature please turn on the switch.</string>
-    <string name="instruction2">- Add at least one contact and at most 3 contacts.</string>
-    <string name="instruction3">- The SOS message will contain your current location in addition to the following text message: \'Please Help Me\'</string>
+    <string name="instruction1">- Please Turn on the switch to be able to use this feature.</string>
+    <string name="instruction2">- Add at LEAST one contact and at MOST 3 contacts.</string>
+    <string name="instruction3">- The SOS message will contain your current location in addition to the following text message: \'Please Help Me!\'</string>
     <string name="send_sos_message_btn">Send SOS Message</string>
     <string name="add_edit_contacts_btn">Add / Edit Contacts</string>
     <string name="add_contact_btn">Add Contact</string>
@@ -69,8 +69,8 @@
     <string name="notifications_admin_channel_name" translatable="false">Es3fny_Channel</string>
     <string name="notifications_admin_channel_description" translatable="false">This Channel Used In Notification Of Es3fny App</string>
     <string name="home">Home</string>
-    <string name="blood_type">blood type</string>
-    <string name="describe_the_patient_state">Describe the Request Information</string>
+    <string name="blood_type">Blood type</string>
+    <string name="describe_the_patient_state" tools:ignore="TypographyEllipsis">Request description...</string>
     <string name="send_request">Send Request</string>
     <string name="help_domain">Help Domain</string>
     <string name="request_help">Request Help</string>
@@ -82,11 +82,11 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="skip">Skip</string>
-    <string name="go_to_register">Go To Registration</string>
+    <string name="go_to_register">Register</string>
     <string name="hospital">Hospital</string>
     <string name="pharmacy">Pharmacy</string>
     <string name="police">Police</string>
-    <string name="within_3_km">within 3 KM</string>
+    <string name="within_3_km">Within 3 KM</string>
     <string name="find">Find</string>
     <string name="status">Status</string>
     <string name="request_from">Request From</string>
@@ -101,54 +101,54 @@
     <string name="street">Street</string>
     <string name="national_id">National ID</string>
     <string name="register">Register</string>
-    <string name="go_to_login">go to login</string>
+    <string name="go_to_login">login</string>
     <string name="help_request">Help Request</string>
     <string name="donor">Blood Donor</string>
-    <string name="responces">Responces</string>
+    <string name="responces">Responses</string>
     <string name="toolbar_title">Toolbar Title</string>
     <string name="distance">Distance</string>
     <string name="user_name">User Name</string>
-    <string name="blood_request_success">Blood Donation Request Sent</string>
-    <string name="permission_denied">Sorry Permission Denied .</string>
-    <string name="location_enabled">Location Enabled .</string>
-    <string name="no_internet">No Internet Connection.</string>
-    <string name="location_disabled">Location Disabled…</string>
-    <string name="requesting">Requesting</string>
-    <string name="please_wait_till_help_request">Please Wait till Help Request Completes</string>
-    <string name="enter_help_request_message">Please Enter Help Request Message</string>
-    <string name="please_wait_till_blood_request">Please Wait till Blood Request Completes</string>
-    <string name="open_location_first">Please Open Location First</string>
-    <string name="enter_email">Error : You Must Enter Your Email</string>
-    <string name="enter_password">Error :  You Must Enter Your Password</string>
+    <string name="blood_request_success">Blood Donation Request Sent!</string>
+    <string name="permission_denied">Sorry Permission Denied!</string>
+    <string name="location_enabled">Location Enabled.</string>
+    <string name="no_internet">No Internet Connection!.</string>
+    <string name="location_disabled">Location Disabled!</string>
+    <string name="requesting">Requesting...</string>
+    <string name="please_wait_till_help_request">Please wait till Help request completes!</string>
+    <string name="enter_help_request_message">Help request message...</string>
+    <string name="please_wait_till_blood_request">Please Wait till Blood Donation request completes!</string>
+    <string name="open_location_first">Enable Location First</string>
+    <string name="enter_email">Error: You MUST enter your email!</string>
+    <string name="enter_password">Error: You MUST enter your password!</string>
     <string name="welcome">Welcome </string>
     <string name="the_location">The Location</string>
     <string name="response">response</string>
-    <string name="respond_message">I\'m willing to help</string>
-    <string name="waiting">waiting</string>
-    <string name="closed">closed</string>
-    <string name="respond_sent">Respond Sent</string>
+    <string name="respond_message">I\'m willing to help!</string>
+    <string name="waiting">Waiting</string>
+    <string name="closed">Closed</string>
+    <string name="respond_sent">Respond Sent!</string>
     <string name="km">Km</string>
-    <string name="loading">Loading</string>
-    <string name="wait_till_notification_loads">Please Wait Till Notification Loads</string>
-    <string name="something_went_wrong">Something Went Wrong with your location Please Try Again…</string>
+    <string name="loading">Loading...</string>
+    <string name="wait_till_notification_loads">Please wait till notifications load!</string>
+    <string name="something_went_wrong">Something went wrong with your location, Please try again…</string>
     <string name="registering">Registering</string>
-    <string name="wait_till_register_complete">Please Wait until Registering completes</string>
-    <string name="must_enter_name">Error : You Must Enter a Name</string>
-    <string name="must_enter_email">Error : You Must Enter an Email</string>
-    <string name="must_enter_password">Error : You Must Enter a Password</string>
-    <string name="must_enter_NID">Error : You Must Enter Your National ID</string>
-    <string name="must_enter_valid_NID">Error : You Must Enter A Valid National ID</string>
-    <string name="invalid_NID">Error : Invalid National ID</string>
-    <string name="young_for_register">Error : You must be greater than 19 years</string>
-    <string name="choose_sort_method">Please Choose Sorting Method</string>
-    <string name="activate_sos">Please Activate SOS Message First!</string>
-    <string name="add_contact_first">Please Add contacts first!</string>
+    <string name="wait_till_register_complete">Please wait until registering completes!</string>
+    <string name="must_enter_name">You MUST enter a name!</string>
+    <string name="must_enter_email">You MUST enter an email!</string>
+    <string name="must_enter_password">You MUST enter a password!</string>
+    <string name="must_enter_NID">You MUST enter your National ID!</string>
+    <string name="must_enter_valid_NID">You MUST enter a valid National ID!</string>
+    <string name="invalid_NID">Invalid National ID!</string>
+    <string name="young_for_register">You MUST be older than 19 years!</string>
+    <string name="choose_sort_method">Please choose sorting method</string>
+    <string name="activate_sos">Please activate SOS Message first!</string>
+    <string name="add_contact_first">Please add contacts first!</string>
     <string name="sms_sent">SOS Message Sent!</string>
     <string name="sms_failed">SMS failed, please try again later!</string>
     <string name="add_3_contacts">Sorry you can\'t add more than 3 Contacts!</string>
     <string name="contact_deleted_success">Contact deleted successfully!</string>
     <string name="contact_added_success">Contact added successfully!</string>
-    <string name="back_to_exit">Press again to exit</string>
+    <string name="back_to_exit">Press again to exit!</string>
     <string name="description_title">Description</string>
     <string name="address_title">Address</string>
     <string name="language">عربي</string>
@@ -293,9 +293,9 @@
     <string name="when_the_attack_stop" translatable="false">ضع الشخص في وضعة الآمن عند توقف الحاله</string>
     <string name="stay" translatable="false">ابقَ مع الشخص حتى يتحسن</string>
     <string name="no_feed" translatable="false">لا تعطي الشخص أي شيء للأكل أو الشراب</string>
-    <string name="no_users">there is no near users</string>
-    <string name="help_request_sent">Help Request Sent</string>
-    <string name="notification_deleted">Notification Deleted</string>
+    <string name="no_users">There is no near users</string>
+    <string name="help_request_sent">Help Request Sent!</string>
+    <string name="notification_deleted">Notification Deleted!</string>
     <string name="first_aid_page">First Aid</string>
     <string name="stroke" translatable="false">سكتة دماغية</string>
     <string name="mouth_drop" translatable="false">اطلب من الشخص أن يبتسم أو يظهر أسنانه. تحقق مما إذا كان الفم ملتويا أو متدليًا في أحد الأركان</string>
@@ -305,7 +305,7 @@
     <string name="setup_the_person">دع الشخص يجلس منتصبا. إذا لم يكن ذلك ممكنا ، ضعه في وضغية الآمن</string>
     <string name="stay_calm">اطلب من الشخص أن يبقى هادئًا</string>
     <string name="pref_ringtone_silent">silent</string>
-    <string name="places_error">You Must Select at least One Place</string>
+    <string name="places_error">You MUST select at least one option!</string>
     <string name="poisoning">تسمم</string>
     <string name="ur_safety_first">أولا أمن سلامتك الخاصة. بعد ذلك ، أمن سلامة الشخص المصاب</string>
     <string name="hand_protect">غطي يديك. بأستخدام القفازات أو كيس من البلاستيك</string>

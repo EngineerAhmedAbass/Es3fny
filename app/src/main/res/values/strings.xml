@@ -64,7 +64,7 @@
     <string name="sos_deactivate">Deactivate SOS Message!</string>
     <string name="sos_activate">Activate SOS Message!</string>
     <string name="name">Name:</string>
-    <string name="phone_number">Phone Number</string>
+    <string name="phone_number">Number:</string>
     <string name="remove">Remove</string>
     <string name="notifications_admin_channel_name" translatable="false">Es3fny_Channel</string>
     <string name="notifications_admin_channel_description" translatable="false">This Channel Used In Notification Of Es3fny App</string>

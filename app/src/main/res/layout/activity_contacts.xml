@@ -7,7 +7,10 @@
     android:layout_gravity="center"
     android:background="@color/white"
     tools:context="com.es3fny.Sos.contacts">
-
+    <include
+        layout="@layout/my_action_bar"
+        android:id="@+id/app_bar"
+        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"

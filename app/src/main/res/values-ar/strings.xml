@@ -90,6 +90,7 @@
     <string name="help_domain">مجال الطلب</string>
     <string name="request_blood">طلب فصيلة الدم</string>
     <string name="sos_message">رسالة استغاثة</string>
+    <string name="Must_Login">يجب تسجيل الدخول</string>
     <string name="places">اقرب الاماكن</string>
     <string name="first_aid_tips">الاسعافات الاولية</string>
     <string name="email">البريد الالكترونى</string>

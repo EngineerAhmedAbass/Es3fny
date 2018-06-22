@@ -76,7 +76,7 @@
     <string name="request_help">Request Help</string>
     <string name="request_blood">Request Blood</string>
     <string name="sos_message">SOS Message</string>
-    <string name="places">Places</string>
+    <string name="places">Nearest Places</string>
     <string name="first_aid_tips">First Aid Tips</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
@@ -148,6 +148,7 @@
     <string name="add_3_contacts">Sorry you can\'t add more than 3 Contacts!</string>
     <string name="contact_deleted_success">Contact deleted successfully!</string>
     <string name="contact_added_success">Contact added successfully!</string>
+    <string name="Must_Login">You Must Login!</string>
     <string name="back_to_exit">Press again to exit!</string>
     <string name="description_title">Description</string>
     <string name="address_title">Address</string>

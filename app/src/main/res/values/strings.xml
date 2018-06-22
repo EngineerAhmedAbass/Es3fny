@@ -111,7 +111,7 @@
     <string name="blood_request_success">Blood Donation Request Sent!</string>
     <string name="permission_denied">Sorry Permission Denied!</string>
     <string name="location_enabled">Location Enabled.</string>
-    <string name="no_internet">No Internet Connection!.</string>
+    <string name="no_internet">No Internet Connection!</string>
     <string name="location_disabled">Location Disabled!</string>
     <string name="requesting">Requesting...</string>
     <string name="please_wait_till_help_request">Please wait till Help request completes!</string>
@@ -293,7 +293,7 @@
     <string name="when_the_attack_stop" translatable="false">ضع الشخص في وضعة الآمن عند توقف الحاله</string>
     <string name="stay" translatable="false">ابقَ مع الشخص حتى يتحسن</string>
     <string name="no_feed" translatable="false">لا تعطي الشخص أي شيء للأكل أو الشراب</string>
-    <string name="no_users">There is no near users</string>
+    <string name="no_users">There is no near users!</string>
     <string name="help_request_sent">Help Request Sent!</string>
     <string name="notification_deleted">Notification Deleted!</string>
     <string name="first_aid_page">First Aid</string>

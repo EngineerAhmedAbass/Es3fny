@@ -1,8 +1,11 @@
 package com.es3fny.Maps;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityCompat;
@@ -21,14 +24,22 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.es3fny.Main.Home;
+import com.es3fny.Main.LoginActivity;
+import com.es3fny.Main.MyBackgroundService;
 import com.es3fny.Main.SettingsActivity;
 import com.es3fny.Main.ShowNotifications;
 import com.es3fny.Main.SkipHome;
 import com.es3fny.R;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.ACCESS_FINE_LOCATION;
@@ -38,10 +49,13 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
     String Data = "3";
     private Toolbar toolbar;
     private CheckBox hospital;
+    int Type = 0;
     private CheckBox police;
     private CheckBox pharmacy;
     private ArrayList<String> Selected_Data;
     private boolean Language_Changed;
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore mfirestore;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -50,6 +64,10 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
         setContentView(R.layout.activity_main_map);
         Language_Changed = getIntent().getBooleanExtra("Language_Changed", false);
         Selected_Data = new ArrayList<String>();
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            Type = extras.getInt("type");
+        }
         // Spinner element
         //final Spinner spinner = (Spinner) findViewById(R.id.spinner);
         Button button = findViewById(R.id.button);
@@ -132,11 +150,20 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.menu, menu);
+        if(Type ==1) {
+            menuInflater.inflate(R.menu.skip_menu, menu);
+        } else {
+            menuInflater.inflate(R.menu.menu, menu);
+        }
         return super.onCreateOptionsMenu(menu);
     }
-
+    public void Log_In(){
+        Intent LoginIntent = new Intent(this, LoginActivity.class);
+        startActivity(LoginIntent);
+        finish();
+    }
     public void onCheckBoxClicked(View view) {
         Selected_Data.clear();
         boolean checked = ((CheckBox) view).isChecked();
@@ -157,7 +184,33 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
         }
         Toast.makeText(this, Selected_Data.toString(), Toast.LENGTH_SHORT).show();
     }
-
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+    private void Log_Out() {
+        if(isNetworkAvailable()) {
+            Intent myService = new Intent(this, MyBackgroundService.class);
+            stopService(myService);
+            Map<String, Object> tokenMapRemove = new HashMap<>();
+            tokenMapRemove.put("token_id", FieldValue.delete());
+            String mCurrentID = mAuth.getCurrentUser().getUid();
+            mfirestore.collection("Users").document(mCurrentID).update(tokenMapRemove).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    mAuth.signOut();
+                    Intent LoginIntent = new Intent(MainMap.this, LoginActivity.class);
+                    startActivity(LoginIntent);
+                }
+            });
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(), R.string.no_internet, Toast.LENGTH_LONG).show();
+        }
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         String load = "";
@@ -165,6 +218,12 @@ public class MainMap extends AppCompatActivity implements AdapterView.OnItemSele
             case R.id.notification:
                 Intent GoToNotifications = new Intent(this, ShowNotifications.class);
                 startActivity(GoToNotifications);
+                break;
+            case R.id.mbtnLogin:
+                Log_In();
+                break;
+            case R.id.log_out:
+                Log_Out();
                 break;
             case R.id.settings:
                 Intent settings = new Intent(this, SettingsActivity.class);

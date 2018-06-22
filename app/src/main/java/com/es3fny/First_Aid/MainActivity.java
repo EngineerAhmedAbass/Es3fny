@@ -1,7 +1,10 @@
 package com.es3fny.First_Aid;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -15,17 +18,27 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.es3fny.Main.LoginActivity;
+import com.es3fny.Main.MyBackgroundService;
 import com.es3fny.Main.SettingsActivity;
 import com.es3fny.Main.ShowNotifications;
 import com.es3fny.R;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FieldValue;
+import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.HashMap;
 import java.util.Locale;
-
+import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
-
+    int Type = 0;
+    private FirebaseAuth mAuth;
+    private FirebaseFirestore mfirestore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +50,10 @@ public class MainActivity extends AppCompatActivity {
         assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
         setTitle("الاسعافات الاولية");
-
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            Type = extras.getInt("type");
+        }
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         TextView mTitle =  toolbar.findViewById(R.id.toolbar_title);
         mTitle.setText(getTitle());
@@ -69,8 +85,44 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
-        menuInflater.inflate(R.menu.menu, menu);
+        if(Type == 1) {
+            menuInflater.inflate(R.menu.skip_menu, menu);
+        } else {
+            menuInflater.inflate(R.menu.menu, menu);
+        }
         return super.onCreateOptionsMenu(menu);
+    }
+    public void Log_In(){
+        Intent LoginIntent = new Intent(this, LoginActivity.class);
+        startActivity(LoginIntent);
+        finish();
+    }
+    private void Log_Out() {
+        if(isNetworkAvailable()) {
+            Intent myService = new Intent(this, MyBackgroundService.class);
+            stopService(myService);
+            Map<String, Object> tokenMapRemove = new HashMap<>();
+            tokenMapRemove.put("token_id", FieldValue.delete());
+            String mCurrentID = mAuth.getCurrentUser().getUid();
+            mfirestore.collection("Users").document(mCurrentID).update(tokenMapRemove).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void aVoid) {
+                    mAuth.signOut();
+                    Intent LoginIntent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(LoginIntent);
+                }
+            });
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(), R.string.no_internet, Toast.LENGTH_LONG).show();
+        }
+    }
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     @Override
@@ -80,6 +132,12 @@ public class MainActivity extends AppCompatActivity {
             case R.id.notification:
                 Intent GoToNotifications = new Intent(this, ShowNotifications.class);
                 startActivity(GoToNotifications);
+                break;
+            case R.id.log_out:
+                Log_Out();
+                break;
+            case R.id.mbtnLogin:
+                Log_In();
                 break;
             case R.id.settings:
                 Intent settings = new Intent(this, SettingsActivity.class);

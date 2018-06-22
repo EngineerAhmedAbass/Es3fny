@@ -182,6 +182,15 @@ public class EMERGENCY extends Fragment {
             }
         });
 
+        ImageButton no_breathing = view.findViewById(R.id.ImageButton19);
+        no_breathing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EMERGENCY.this.getActivity(), no_breathing.class);
+                startActivity(intent);
+            }
+        });
+
         ImageButton poisoning = view.findViewById(R.id.ImageButton20);
         poisoning.setOnClickListener(new View.OnClickListener() {
             @Override

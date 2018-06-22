@@ -26,7 +26,7 @@ import java.util.Locale;
 
 public class SkipHome extends AppCompatActivity {
     public Button Places_BTN;
-    public Button First_Aid_BTN;
+    public Button First_Aid_BTN, Blood__BTN, Help_BTN,SOS_Btn;
     boolean doubleBackToExitPressedOnce = false;
     private boolean Language_Changed;
 
@@ -56,6 +56,9 @@ public class SkipHome extends AppCompatActivity {
         setContentView(R.layout.activity_skip_home);
         Places_BTN = findViewById(R.id.Places_BTN);
         First_Aid_BTN = findViewById(R.id.First_Aid_BTN);
+        Blood__BTN = findViewById(R.id.Blood_BTN);
+        Help_BTN = findViewById(R.id.help_request_Btn);
+        SOS_Btn = findViewById(R.id.SOS_BTN);
         Bundle extra =  getIntent().getExtras();
         if(extra != null ){
             Type = extra.getInt("type");
@@ -71,6 +74,24 @@ public class SkipHome extends AppCompatActivity {
                 Intent MapsIntnet = new Intent(SkipHome.this, MainMap.class);
                 MapsIntnet.putExtra("type",1);
                 startActivity(MapsIntnet);
+            }
+        });
+        Blood__BTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SkipHome.this, R.string.Must_Login, Toast.LENGTH_SHORT).show();
+            }
+        });
+        Help_BTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SkipHome.this, R.string.Must_Login, Toast.LENGTH_SHORT).show();
+            }
+        });
+        SOS_Btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(SkipHome.this, R.string.Must_Login, Toast.LENGTH_SHORT).show();
             }
         });
         First_Aid_BTN.setOnClickListener(new View.OnClickListener() {

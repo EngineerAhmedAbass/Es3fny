@@ -189,6 +189,7 @@ public class NotificationActivity extends AppCompatActivity {
             });
         } else {
             Status.setText(R.string.response);
+
         }
     }
 
@@ -269,10 +270,10 @@ public class NotificationActivity extends AppCompatActivity {
                 @Override
                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                     String status = documentSnapshot.get("status").toString();
-                    if (status.equals(getString(R.string.waiting))) {
+                    if (status.equals("waiting")) {
                         sendRespond.setVisibility(View.VISIBLE);
                     }
-                    Status.setText(status);
+                    Status.setText(getString(R.string.waiting));
                 }
             });
         }

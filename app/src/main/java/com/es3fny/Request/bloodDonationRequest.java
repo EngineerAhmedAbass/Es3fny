@@ -266,6 +266,10 @@ public class bloodDonationRequest extends AppCompatActivity {
                                 if (temUserLat.equals("null") || temUserLong.equals("null")){
                                     continue;
                                 }
+                                if (MyBackgroundService.latitude.equals("null") || MyBackgroundService.longtitude.equals("null")){
+                                    Toast.makeText(bloodDonationRequest.this, R.string.no_location, Toast.LENGTH_SHORT).show();
+                                    return;
+                                }
                                 double Dist = distance(Double.parseDouble(MyBackgroundService.latitude), Double.parseDouble(MyBackgroundService.longtitude), Double.parseDouble(temUserLat), Double.parseDouble(temUserLong));
                                 if (Dist < 12) {
                                     Log.e("In Distance ", "To " + temp_user.getName() + " " + Dist);

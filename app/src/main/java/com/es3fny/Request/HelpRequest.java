@@ -278,6 +278,10 @@ public class HelpRequest extends AppCompatActivity {
                                     if (temUserLat.equals("null") || temUserLong.equals("null")){
                                         continue;
                                     }
+                                    if (MyBackgroundService.latitude.equals("null") || MyBackgroundService.longtitude.equals("null")){
+                                        Toast.makeText(HelpRequest.this, R.string.no_location, Toast.LENGTH_SHORT).show();
+                                        return;
+                                    }
                                     double Dist = distance(Double.parseDouble(MyBackgroundService.latitude), Double.parseDouble(MyBackgroundService.longtitude), Double.parseDouble(temp_user.getLatitude()), Double.parseDouble(temp_user.getLongtitude()));
                                     if (Dist < 12) {
                                         Log.e("In Distance ", "To " + temp_user.getName() + " " + Dist);

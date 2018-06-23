@@ -29,7 +29,7 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:id="@+id/cpr"
+                    android:id="@+id/cprbtn"
                     android:layout_width="167dp"
                     android:layout_height="95dp"
                     android:layout_marginEnd="2dp"
@@ -110,7 +110,7 @@
                     android:src="@drawable/wash" />
 
                 <ImageButton
-                    android:id="@+id/ImageButton04"
+                    android:id="@+id/safty"
                     android:layout_width="167dp"
                     android:layout_height="95dp"
                     android:layout_marginEnd="2dp"

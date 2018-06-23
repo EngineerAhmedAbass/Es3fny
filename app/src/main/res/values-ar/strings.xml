@@ -178,6 +178,7 @@
     <string name="pref_header_general">عام</string>
     <string name="pref_header_notifications">الاشعارات</string>
     <string name="places_error">يجب ان تختار علي الاقل اختيار واحد!</string>
+    <string name="no_location">لا يمكن الحصول على الموقع, حاول مرة اخرة</string>
 
     <!-- **************************************** -->
 

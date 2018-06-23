@@ -141,8 +141,6 @@ public class SkipHome extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void Log_In(){
-        Intent LoginIntent = new Intent(SkipHome.this, LoginActivity.class);
-        startActivity(LoginIntent);
         finish();
     }
     public void SetLocal(){

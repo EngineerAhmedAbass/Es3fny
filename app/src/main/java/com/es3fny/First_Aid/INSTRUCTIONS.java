@@ -1,13 +1,14 @@
 package com.es3fny.First_Aid;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import com.es3fny.R;
 
@@ -19,12 +20,21 @@ public class INSTRUCTIONS extends Fragment {
 
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_instruction, container, false);
-        ImageButton btncpr = view.findViewById(R.id.cpr);
 
-        btncpr.setOnClickListener(new View.OnClickListener() {
+        ImageButton btnCPR = view.findViewById(R.id.cprbtn);
+        btnCPR.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
+            public void onClick(View v) {
+                Intent intent = new Intent(INSTRUCTIONS.this.getActivity(), cpr.class);
+                startActivity(intent);
+            }
+        });
+        ImageButton btnstress = view.findViewById(R.id.stress);
+        btnstress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(INSTRUCTIONS.this.getActivity(), nerve.class);
+                startActivity(intent);
             }
         });
 

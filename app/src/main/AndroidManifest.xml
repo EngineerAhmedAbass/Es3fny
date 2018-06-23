@@ -246,10 +246,20 @@
             android:parentActivityName=".First_Aid.MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator" />
-        <activity android:name=".First_Aid.no_breathing"
+        <activity
+            android:name=".First_Aid.no_breathing"
             android:parentActivityName=".First_Aid.MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator" />
-</application>
+        <activity android:name=".First_Aid.cpr"
+            android:parentActivityName=".First_Aid.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+
+        <activity android:name=".First_Aid.nerve"
+            android:parentActivityName=".First_Aid.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+    </application>
 
 </manifest>

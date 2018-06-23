@@ -124,7 +124,7 @@
     <string name="the_location">The Location</string>
     <string name="response">response</string>
     <string name="respond_message">I\'m willing to help!</string>
-    <string name="waiting">Waiting for help</string>
+    <string name="waiting">Waiting</string>
     <string name="closed">Closed</string>
     <string name="respond_sent">Respond Sent!</string>
     <string name="km">Km</string>
@@ -329,5 +329,12 @@
     <string name="no_breath">إذا كان لا يتنفس ، قم بتدوير أو وضع الشخص على ظهره على الأرض ، وابدأ بالإنعاش القلبي الرئوي(CPR)</string>
     <string name="cpr_continue">استمر في إعطاء الإنعاش القلبي الرئوي حتى يبدأ الشخص في التنفس او تصل المساعدة أو تصبح المنطقة غير آمنة للاستمرار.</string>
     <string name="finel_no_breathing">إذا بدأ الشخص في التنفس مرة أخرى ، قدم الإسعافات الأولية (على سبيل المثال اوقف النزيف!) ، أبقيه دافئًا. رتب النقل العاجل إلى مركز للرعاية الصحية ؛ استمر في مراقبة الشخص (التنفس ، الوعي ، ...). إذا توقف عن التنفس مرة أخرى ، قم بإعادة عمل CPR</string>
+    <string name="cpr_tittle">الإنعاش القلبي الرئوي (CPR)</string>
+    <string name="nerve">التوتر و الاسعافات</string>
+    <string name="regain_calm">حاول أن تضع عواطفك تحت السيطرة قبل المتابعة و ان لا تفزع. من الممكن ان تأخذ بعض الوقت للابتعاد واستعادة هدوءك.</string>
+    <string name="safty">لا تضع نفسك في خطر تحت اي ظرف دائماً ضع سلامتك في المقام الاول.</string>
+    <string name="talk">تحدث مع أصدقائك وعائلتك عن ذلك إذا كنت لا تزال قلق أو حزين على كل حال انت أنقذت حياة شخص ما فأنت بطل.</string>
+    <string name="not_easy">ليس من السهل دائمًا معالجة صادمة عاطفية. ناتجة عن عمل اسعافات اولية لشخص مصاب.</string>
     <string name="no_location">Can not Retrieve Your Location, Try again later</string>
 </resources>
+

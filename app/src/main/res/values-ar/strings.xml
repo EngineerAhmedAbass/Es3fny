@@ -179,6 +179,8 @@
     <string name="pref_header_notifications">الاشعارات</string>
     <string name="places_error">يجب ان تختار علي الاقل اختيار واحد!</string>
     <string name="no_location">لا يمكن الحصول على الموقع, حاول مرة اخرة</string>
+    <string name="loging">يتم الدخول</string>
+    <string name="wait_till_loging_complete">الرجاء الانتظار للدخول</string>
 
     <!-- **************************************** -->
 

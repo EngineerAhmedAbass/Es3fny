@@ -336,5 +336,7 @@
     <string name="talk">تحدث مع أصدقائك وعائلتك عن ذلك إذا كنت لا تزال قلق أو حزين على كل حال انت أنقذت حياة شخص ما فأنت بطل.</string>
     <string name="not_easy">ليس من السهل دائمًا معالجة صادمة عاطفية. ناتجة عن عمل اسعافات اولية لشخص مصاب.</string>
     <string name="no_location">Can not Retrieve Your Location, Try again later</string>
+    <string name="loging">Loging</string>
+    <string name="wait_till_loging_complete">Wait till loging complete</string>
 </resources>
 

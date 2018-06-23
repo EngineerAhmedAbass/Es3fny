@@ -1,5 +1,6 @@
 package com.es3fny.Main;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -36,11 +37,15 @@ public class  LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseFirestore mFirestore;
     PermissionManager permissionManager;
+    private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        progressDialog=new ProgressDialog(this);
+        progressDialog.setTitle(getString(R.string.loging));
+        progressDialog.setMessage(getString(R.string.wait_till_loging_complete));
         permissionManager = new PermissionManager() {
         };
         permissionManager.checkAndRequestPermissions(this);
@@ -66,6 +71,15 @@ public class  LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                /*FirebaseAuth.getInstance().sendPasswordResetEmail("engineer.ahmed2018@gmail.com")
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(LoginActivity.this,"Email sent ",Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });*/
                 Intent intent = new Intent(LoginActivity.this, SkipHome.class);
                 intent.putExtra("type",1);
                 startActivity(intent);
@@ -84,6 +98,7 @@ public class  LoginActivity extends AppCompatActivity {
                 }else if(!isNetworkAvailable()){
                     Toast.makeText(LoginActivity.this,R.string.no_internet,Toast.LENGTH_SHORT).show();
                 }else{
+                    progressDialog.show();
                 mAuth.signInWithEmailAndPassword(email,Password)
                         .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
@@ -101,7 +116,6 @@ public class  LoginActivity extends AppCompatActivity {
                                     SharedPreferences.Editor editor = settings.edit();
                                     editor.putString("example_text",mCurrentName);
                                     editor.apply();
-
                                     Map<String, Object> tokenMap = new HashMap<>();
                                     tokenMap.put("token_id",token_Id);
                                     mFirestore.collection("Users").document(current_Id).update(tokenMap).addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -123,6 +137,7 @@ public class  LoginActivity extends AppCompatActivity {
 }
 
     private void SendToMain() {
+        progressDialog.dismiss();
         Intent intent = new Intent(LoginActivity.this, Home.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);

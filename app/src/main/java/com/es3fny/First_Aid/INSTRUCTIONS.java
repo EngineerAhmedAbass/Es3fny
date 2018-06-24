@@ -37,6 +37,14 @@ public class INSTRUCTIONS extends Fragment {
                 startActivity(intent);
             }
         });
+        ImageButton btnwash = view.findViewById(R.id.wash);
+        btnwash.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(INSTRUCTIONS.this.getActivity(), wash.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }

@@ -338,7 +338,24 @@
     <string name="talk">تحدث مع أصدقائك وعائلتك عن ذلك إذا كنت لا تزال قلق أو حزين على كل حال انت أنقذت حياة شخص ما فأنت بطل.</string>
     <string name="not_easy">ليس من السهل دائمًا معالجة صادمة عاطفية. ناتجة عن عمل اسعافات اولية لشخص مصاب.</string>
     <string name="no_location">Can not Retrieve Your Location, Try again later</string>
+    <string name="hand_wash">غسيل اليدين</string>
+    <string name="soap">استخدم الصابون (ويفضل الصابون السائل) لتغطية كل سطح اليد. (بدلاً من ذلك ، يمكنك أيضًا استخدام الرماد الذي لم يعد ساخنًا لغسل يديك).</string>
+    <string name="wash_good">افرك يديك بقوة (40-60 ثانية) واغسل يديك جيداً.</string>
+    <string name="soap_covers_all">تأكد من أن الصابون يمس جميع أجزاء يديك.</string>
+    <string name="finger_tips">لا تنسى أطراف أصابعك والجلد بين أصابعك</string>
+    <string name="rinse">اشطف يديك جيدا. استخدم الكثير من الماء.</string>
+    <string name="dry">جفيف يديك بمنشفة أو قطعة قماش نظيفة.</string>
+    <string name="water_keep">تذكر أن تغلق الصنبور لعدم إهدار المياه</string>
+    <string name="body_shit">في النهاية يمكنك ارتداء قفازات إذا كانت متوفرة أو كيس بلاستيكي نظيف لتغطية يديك إذا كنت قد ستلامس الدماء أو سوائل الجسم (مثل البول ، والقيء ، والبراز ، ...)</string>
     <string name="loging">Loging</string>
     <string name="wait_till_loging_complete">Wait till loging complete</string>
+    <string name="calm">ابق هادئا وطمأن المريض</string>
+    <string name="position">دع المريض يتخذ الوضع الذي يجده اكثر راحة</string>
+    <string name="inhaler">إذا كان المريض يستخدم جهاز استنشاق احضره له وساعدة في استخدامة</string>
+    <string name="windows">وفير له الهواء النقي عن طريق فتح النوافذ</string>
+    <string name="remove_clothes">مساعدته على خلع أي ملابس تضيق تنفسه</string>
+    <string name="went_to_sleep">إذا فقد المريض وعيه تأكد من أن مجرى الهواء يبقى مفتوحًا</string>
+    <string name="keep_watch">ابقا مع المريض واستمرار في مراقبته</string>
+    <string name="center">دائما اذهب بالمريض إلى مركز رعاية صحية لمتابعة ادق</string>
 </resources>
 

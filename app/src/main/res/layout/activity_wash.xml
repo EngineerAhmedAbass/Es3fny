@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.es3fny.First_Aid.asthma"
-    android:background="#BDBDBD">
+    android:background="#BDBDBD"
+    tools:context="com.es3fny.First_Aid.wash">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -17,9 +17,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <include
-            layout="@layout/my_action_bar"
             android:id="@+id/app_bar"
-            />
+            layout="@layout/my_action_bar" />
 
     </LinearLayout>
 
@@ -71,7 +70,7 @@
                     android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
-                    android:text="@string/b1"
+                    android:text=" ١"
                     android:textAlignment="gravity"
                     android:textColor="#3F51B5"
                     android:textSize="45sp"
@@ -86,7 +85,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/calm"
+                    android:text="بلل يديك تحت الماء الجاري."
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
@@ -94,6 +93,29 @@
                     app:layout_constraintEnd_toStartOf="@+id/textView2"
                     app:layout_constraintTop_toTopOf="parent" />
 
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/img0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+                tools:ignore="InvalidId,MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/img0view"
+                    android:layout_width="match_parent"
+                    android:layout_height="363dp"
+                    android:src="@drawable/washwater"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -106,7 +128,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+                app:layout_constraintTop_toBottomOf="@+id/img0">
 
                 <TextView
                     android:id="@+id/textView4"
@@ -118,7 +140,7 @@
                     android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
-                    android:text="@string/b2"
+                    android:text=" ۲"
                     android:textAlignment="gravity"
                     android:textColor="#3F51B5"
                     android:textSize="45sp"
@@ -129,22 +151,46 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="326dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
+                    android:layout_marginStart="1dp"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/position"
+                    android:text="@string/soap"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView4"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
 
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                tools:ignore="InvalidId,MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/img1view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/soup"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -157,7 +203,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+                app:layout_constraintTop_toBottomOf="@+id/img1">
 
                 <TextView
                     android:id="@+id/textView5"
@@ -169,7 +215,7 @@
                     android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
-                    android:text="@string/b3"
+                    android:text=" ۳"
                     android:textAlignment="gravity"
                     android:textColor="#3F51B5"
                     android:textSize="45sp"
@@ -182,41 +228,19 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/inhaler"
+                    android:text="@string/wash_good"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
 
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/img1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
-                tools:ignore="InvalidId,MissingConstraints">
 
-                <ImageView
-                    android:id="@+id/img1view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/inhalers"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/constraintLayout4"
@@ -228,7 +252,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img1">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -240,7 +264,7 @@
                     android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
-                    android:text="@string/b4"
+                    android:text=" ٤"
                     android:textAlignment="gravity"
                     android:textColor="#3F51B5"
                     android:textSize="45sp"
@@ -255,7 +279,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/windows"
+                    android:text="@string/soap_covers_all"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
@@ -289,7 +313,7 @@
                     android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
-                    android:text="@string/b5"
+                    android:text=" ٥"
                     android:textAlignment="gravity"
                     android:textColor="#3F51B5"
                     android:textSize="45sp"
@@ -304,7 +328,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/remove_clothes"
+                    android:text="@string/finger_tips"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
@@ -337,7 +361,7 @@
                     android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
-                    android:text="@string/b6"
+                    android:text=" ٦"
                     android:textAlignment="gravity"
                     android:textColor="#3F51B5"
                     android:textSize="45sp"
@@ -352,7 +376,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/went_to_sleep"
+                    android:text="@string/rinse"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
@@ -365,7 +389,7 @@
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/constraintLayout9"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="68dp"
                 android:layout_marginTop="1dp"
                 android:background="@android:color/white"
                 android:orientation="horizontal"
@@ -384,7 +408,7 @@
                     android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
-                    android:text="@string/b7"
+                    android:text=" ٧"
                     android:textAlignment="gravity"
                     android:textColor="#3F51B5"
                     android:textSize="45sp"
@@ -395,12 +419,12 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="337dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/keep_watch"
+                    android:text="@string/dry"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
@@ -409,7 +433,33 @@
                     app:layout_constraintEnd_toStartOf="@+id/textView9"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
             </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout9"
+                tools:ignore="InvalidId,MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/img2view"
+                    android:layout_width="match_parent"
+                    android:layout_height="216dp"
+                    android:src="@drawable/dry"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/constraintLayout10"
@@ -421,7 +471,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout9">
+                app:layout_constraintTop_toBottomOf="@+id/img2">
 
                 <TextView
                     android:id="@+id/textView10"
@@ -433,7 +483,7 @@
                     android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
-                    android:text="@string/b8"
+                    android:text=" ٨"
                     android:textAlignment="gravity"
                     android:textColor="#3F51B5"
                     android:textSize="45sp"
@@ -444,20 +494,16 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:layout_width="341dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginStart="8dp"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/center"
+                    android:text="@string/water_keep"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView10"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
 
@@ -494,11 +540,11 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:layout_width="325dp"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/wash_reminder"
+                    android:text="@string/body_shit"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"

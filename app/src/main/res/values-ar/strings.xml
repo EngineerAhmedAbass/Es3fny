@@ -82,6 +82,8 @@
     <string name="send_btn">ارسال</string>
     <string name="sos_deactivate">إلغاء تنشيط رسالة SOS!</string>
     <string name="sos_activate">تنشيط رسالة SOS!</string>
+    <string name="Email_Sent">تم الارسال</string>
+    <string name="Must_Email">يجب ادخال البريد الالكتروني</string>
     <string name="name">الاسم:</string>
     <string name="home">الرئيسية</string>
     <string name="blood_type">فصيلة الدم</string>

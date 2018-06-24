@@ -251,15 +251,17 @@
             android:parentActivityName=".First_Aid.MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator" />
-        <activity android:name=".First_Aid.cpr"
+        <activity
+            android:name=".First_Aid.cpr"
             android:parentActivityName=".First_Aid.MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator" />
-
-        <activity android:name=".First_Aid.nerve"
+        <activity
+            android:name=".First_Aid.nerve"
             android:parentActivityName=".First_Aid.MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator" />
+        <activity android:name=".Main.ResetPassActivity"></activity>
     </application>
 
 </manifest>

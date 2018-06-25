@@ -89,7 +89,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/wash_before"
+                    android:text="@string/safe_place"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
@@ -119,8 +119,6 @@
                     android:layout_height="match_parent"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="2dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
                     android:text="@string/b2"
@@ -129,9 +127,10 @@
                     android:textSize="45sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.996"
+                    app:layout_constraintHorizontal_bias="0.997"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.044" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -140,7 +139,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/blood_contact"
+                    android:text="@string/verify"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
@@ -165,7 +164,7 @@
                     android:id="@+id/img1view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/hand_protect"
+                    android:src="@drawable/breath"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -193,8 +192,6 @@
                     android:layout_height="match_parent"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="2dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
                     android:text="@string/b3"
@@ -203,23 +200,25 @@
                     android:textSize="45sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.996"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="335dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/self_presure"
+                    android:text="@string/clear_throught"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView7"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
@@ -238,7 +237,9 @@
                     android:id="@+id/img2view"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/selfperss"
+                    android:layout_marginBottom="8dp"
+                    android:src="@drawable/cpr1"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -262,8 +263,6 @@
                     android:layout_height="match_parent"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="2dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
                     android:text="@string/b4"
@@ -274,27 +273,51 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.04" />
 
                 <TextView
-                    android:layout_width="0dp"
+
+                    android:layout_width="345dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/bleeding_stopped"
+                    android:text="@string/CPR_steps"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView4"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
 
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                tools:ignore="InvalidId,MissingConstraints">
+
+                <ImageView
+                    android:id="@+id/imgview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cpr2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </android.support.constraint.ConstraintLayout>
 
@@ -308,7 +331,7 @@
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+                app:layout_constraintTop_toBottomOf="@+id/img">
 
                 <TextView
                     android:id="@+id/textView6"
@@ -337,7 +360,7 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/bandage"
+                    android:text="@string/fake_breath"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
@@ -347,27 +370,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
 
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/img3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@android:color/white"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4"
-                tools:ignore="InvalidId,MissingConstraints">
 
-                <ImageView
-                    android:id="@+id/img3view"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/cuts_cotton"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </android.support.constraint.ConstraintLayout>
 
             <android.support.constraint.ConstraintLayout
                 android:id="@+id/constraintLayout8"
@@ -379,7 +382,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/img3">
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
 
                 <TextView
                     android:id="@+id/textView8"
@@ -387,8 +390,6 @@
                     android:layout_height="match_parent"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="2dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
                     android:text="@string/b6"
@@ -397,23 +398,23 @@
                     android:textSize="45sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.996"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="335dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/stop_bleeding"
+                    android:text="@string/fake_breath_steps"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toStartOf="@+id/textView8"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>
@@ -436,8 +437,6 @@
                     android:layout_height="match_parent"
                     android:layout_marginBottom="8dp"
                     android:layout_marginEnd="2dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
                     android:layout_marginStart="2dp"
                     android:gravity="top"
                     android:text="@string/b7"
@@ -446,22 +445,24 @@
                     android:textSize="45sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.996"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
 
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/keep_clean"
+                    android:text="@string/continue_1"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/textView9"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -506,61 +507,12 @@
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
                     android:gravity="top"
-                    android:text="@string/transport"
-                    android:textAlignment="gravity"
-                    android:textColor="#000000"
-                    android:textSize="28sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/textView10"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </android.support.constraint.ConstraintLayout>
-
-            <android.support.constraint.ConstraintLayout
-                android:id="@+id/constraintLayout11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="1dp"
-                android:background="@android:color/white"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout10">
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="2dp"
-                    android:layout_marginLeft="2dp"
-                    android:layout_marginRight="2dp"
-                    android:layout_marginStart="2dp"
-                    android:gravity="top"
-                    android:text="@string/b9"
-                    android:textAlignment="gravity"
-                    android:textColor="#3F51B5"
-                    android:textSize="45sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.996"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="10dp"
-                    android:gravity="top"
                     android:text="@string/wash_reminder"
                     android:textAlignment="gravity"
                     android:textColor="#000000"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    app:layout_constraintEnd_toStartOf="@+id/textView11"
+                    app:layout_constraintEnd_toStartOf="@+id/textView10"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>

@@ -55,6 +55,7 @@ public class  LoginActivity extends AppCompatActivity {
         Button mLoginBtn = findViewById(R.id.btnLogin);
         Button mRegPageBtn = findViewById(R.id.btnLinkToRegisterScreen);
         Button mSkipBtn = findViewById(R.id.btnSkip);
+        Button mResetBtn = findViewById(R.id.btnReset);
 
         mAuth = FirebaseAuth.getInstance();
         mFirestore = FirebaseFirestore.getInstance();
@@ -67,6 +68,15 @@ public class  LoginActivity extends AppCompatActivity {
             }
         });
 
+        mResetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(LoginActivity.this, ResetPassActivity.class);
+                intent.putExtra("type",1);
+                startActivity(intent);
+            }
+        });
         mSkipBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -135,6 +135,7 @@ public class  LoginActivity extends AppCompatActivity {
                                         }
                                     });
                                 } else {
+                                    progressDialog.dismiss();
                                     // If sign in fails, display a message to the user.
                                     Toast.makeText(LoginActivity.this,"Error : "+task.getException().getMessage(),Toast.LENGTH_SHORT).show();
                                 }

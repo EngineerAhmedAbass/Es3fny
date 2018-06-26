@@ -241,11 +241,11 @@ public class HelpRequest extends AppCompatActivity {
         mCurrentName = mAuth.getCurrentUser().getDisplayName();
         Message = requestText.getText().toString();
         Domain = spinner.getSelectedItem().toString();
-        if (Message.equals("")) {
+        /*if (Message.equals("")) {
             progressDialog.hide();
             SendRequestBtn.setClickable(true);
             Toast.makeText(HelpRequest.this, R.string.enter_help_request_message, Toast.LENGTH_SHORT).show();
-        } else {
+        } else {*/
             Map<String, Object> RequestMessage = new HashMap<>();
             Date currentTime = Calendar.getInstance().getTime();
             RequestMessage.put("message", Message);
@@ -367,7 +367,7 @@ public class HelpRequest extends AppCompatActivity {
                     });*/
                 }
             });
-        }
+        /*}*/
 
 /*
         mfirestore.collection("Users").addSnapshotListener(HelpRequest.this, new EventListener<QuerySnapshot>() {

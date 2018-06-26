@@ -272,8 +272,10 @@ public class NotificationActivity extends AppCompatActivity {
                     String status = documentSnapshot.get("status").toString();
                     if (status.equals("waiting")) {
                         sendRespond.setVisibility(View.VISIBLE);
+                        Status.setText(getString(R.string.waiting));
+                    }else {
+                        Status.setText(getString(R.string.closed));
                     }
-                    Status.setText(getString(R.string.waiting));
                 }
             });
         }

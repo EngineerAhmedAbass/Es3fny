@@ -110,7 +110,7 @@
                     android:src="@drawable/wash" />
 
                 <ImageButton
-                    android:id="@+id/safty"
+                    android:id="@+id/safety"
                     android:layout_width="167dp"
                     android:layout_height="95dp"
                     android:layout_marginEnd="2dp"

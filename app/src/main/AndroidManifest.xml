@@ -267,8 +267,12 @@
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator" />
         <activity android:name=".Main.ResetPassActivity" />
-
-        <activity android:name=".First_Aid.call_help"
+        <activity
+            android:name=".First_Aid.call_help"
+            android:parentActivityName=".First_Aid.MainActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="InnerclassSeparator" />
+        <activity android:name=".First_Aid.safe_position"
             android:parentActivityName=".First_Aid.MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator" />

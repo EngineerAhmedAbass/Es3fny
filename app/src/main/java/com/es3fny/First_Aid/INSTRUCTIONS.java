@@ -46,6 +46,15 @@ public class INSTRUCTIONS extends Fragment {
             }
         });
 
+        ImageButton btncall = view.findViewById(R.id.call);
+        btncall.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(INSTRUCTIONS.this.getActivity(), call_help.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 }

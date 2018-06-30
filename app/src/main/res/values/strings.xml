@@ -82,7 +82,7 @@
     <string name="request_help">Request Help</string>
     <string name="request_blood">Request Blood</string>
     <string name="sos_message">SOS Message</string>
-    <string name="places">Nearest Places</string>
+    <string name="places">Nearest \n Places</string>
     <string name="first_aid_tips">First\n Aid Tips</string>
     <string name="email">Email</string>
     <string name="password">Password</string>

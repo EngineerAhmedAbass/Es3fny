@@ -71,6 +71,15 @@ public class INSTRUCTIONS extends Fragment {
                 startActivity(intent);
             }
         });
+
+        ImageButton btndealing = view.findViewById(R.id.dealing);
+        btndealing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(INSTRUCTIONS.this.getActivity(), dealing_with_help.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }

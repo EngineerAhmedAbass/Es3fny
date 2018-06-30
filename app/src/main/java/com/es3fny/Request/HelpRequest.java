@@ -241,6 +241,11 @@ public class HelpRequest extends AppCompatActivity {
         mCurrentName = mAuth.getCurrentUser().getDisplayName();
         Message = requestText.getText().toString();
         Domain = spinner.getSelectedItem().toString();
+        if(Domain.equals("Choose") || Domain.equals("اختر")){
+            Toast.makeText(HelpRequest.this, R.string.Help_type_missed, Toast.LENGTH_SHORT).show();
+            progressDialog.hide();
+            return;
+        }
         /*if (Message.equals("")) {
             progressDialog.hide();
             SendRequestBtn.setClickable(true);

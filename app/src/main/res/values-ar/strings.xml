@@ -7,13 +7,14 @@
     <string name="settings_name">الاعدادات</string>
     <string name="Notification">اشعارات</string>
     <string-array name="Requests_Domains">
+        <item>اختر</item>
         <item>قلب</item>
         <item>حروق</item>
         <item>ضغط وسكر</item>
-        <item>غيبوبة</item>
         <item>اسعافات اولية</item>
     </string-array>
     <string-array name="blood_types">
+        <item>Choose</item>
         <item>A+</item>
         <item>A-</item>
         <item>B+</item>
@@ -188,6 +189,8 @@
     <string name="no_location">لا يمكن الحصول على الموقع, حاول مرة اخرة</string>
     <string name="loging">يتم الدخول</string>
     <string name="wait_till_loging_complete">الرجاء الانتظار للدخول</string>
+    <string name="Blood_type_missed">يجب اختيار فصيله الدم</string>
+    <string name="Help_type_missed">يجب اختيار نوع طلب المساعده</string>
 
     <!-- **************************************** -->
 

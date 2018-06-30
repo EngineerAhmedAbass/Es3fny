@@ -8,13 +8,14 @@
     <string name="settings_name">Settings</string>
     <string name="Notification">Notification</string>
     <string-array name="Requests_Domains">
+        <item>Choose</item>
         <item>Heart</item>
         <item>Burns</item>
         <item>Pressure and Diabetes</item>
-        <item>Coma</item>
         <item>First Aid</item>
     </string-array>
     <string-array name="blood_types">
+        <item>اختر</item>
         <item>A+</item>
         <item>A-</item>
         <item>B+</item>
@@ -404,5 +405,7 @@
     <string name="urgent_transport">رتب نقل عاجل إلى أقرب مركز للرعاية الصحية.</string>
     <string name="safe_watch">لا تترك الشخص.استمر في مراقبة التنفس والحالة. إذا توقف الشخص عن التنفس ، قم بوضعة على ظهره وابدأ في الإنعاش القلبي الرئوي (CPR) على الفور</string>
     <string name="tilt_head">ميّل رأسه للخلف للحفاظ على مجرى الهواء مفتوحا وضبط يده تحت خده حتى يبقى الفم في زاوية إلى أسفل.</string>
+    <string name="Blood_type_missed">You must Choose Blood Type</string>
+    <string name="Help_type_missed">you must choose help request domain</string>
 </resources>
 

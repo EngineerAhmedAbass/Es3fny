@@ -233,6 +233,11 @@ public class bloodDonationRequest extends AppCompatActivity {
         mCurrentID = mAuth.getCurrentUser().getUid();
         Message = requestText.getText().toString();
         String btype = spinner.getSelectedItem().toString();
+        if(btype.equals("Choose") || btype.equals("اختر")){
+            Toast.makeText(bloodDonationRequest.this, R.string.Blood_type_missed, Toast.LENGTH_SHORT).show();
+            progressDialog.hide();
+            return;
+        }
         Message += " \n ";
         Message += btype;
         Map<String, Object> RequestMessage = new HashMap<>();

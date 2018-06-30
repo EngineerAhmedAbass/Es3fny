@@ -119,9 +119,9 @@
     <string name="location_enabled">Location Enabled.</string>
     <string name="no_internet">No Internet Connection!</string>
     <string name="location_disabled">Location Disabled!</string>
-    <string name="requesting">Requesting...</string>
+    <string name="requesting">Requesting…</string>
     <string name="please_wait_till_help_request">Please wait till Help request completes!</string>
-    <string name="enter_help_request_message">Help request message...</string>
+    <string name="enter_help_request_message">Help request message…</string>
     <string name="please_wait_till_blood_request">Please Wait till Blood Donation request completes!</string>
     <string name="open_location_first">Enable Location First</string>
     <string name="enter_email">Error: You MUST enter your email!</string>
@@ -134,7 +134,7 @@
     <string name="closed">Closed</string>
     <string name="respond_sent">Respond Sent!</string>
     <string name="km">Km</string>
-    <string name="loading">Loading...</string>
+    <string name="loading">Loading…</string>
     <string name="wait_till_notification_loads">Please wait till notifications load!</string>
     <string name="something_went_wrong">Something went wrong with your location, Please try again…</string>
     <string name="registering">Registering</string>
@@ -335,7 +335,7 @@
     <string name="breath_check">تحقق مما إذا كان الشخص يتنفس من خلال النظر والاستماع والشعور</string>
     <string name="no_breath">إذا كان لا يتنفس ، قم بتدوير أو وضع الشخص على ظهره على الأرض ، وابدأ بالإنعاش القلبي الرئوي(CPR)</string>
     <string name="cpr_continue">استمر في إعطاء الإنعاش القلبي الرئوي حتى يبدأ الشخص في التنفس او تصل المساعدة أو تصبح المنطقة غير آمنة للاستمرار.</string>
-    <string name="finel_no_breathing">إذا بدأ الشخص في التنفس مرة أخرى ، قدم الإسعافات الأولية (على سبيل المثال اوقف النزيف!) ، أبقيه دافئًا. رتب النقل العاجل إلى مركز للرعاية الصحية ؛ استمر في مراقبة الشخص (التنفس ، الوعي ، ...). إذا توقف عن التنفس مرة أخرى ، قم بإعادة عمل CPR</string>
+    <string name="finel_no_breathing">إذا بدأ الشخص في التنفس مرة أخرى ، قدم الإسعافات الأولية (على سبيل المثال اوقف النزيف!) ، أبقيه دافئًا. رتب النقل العاجل إلى مركز للرعاية الصحية ؛ استمر في مراقبة الشخص (التنفس ، الوعي ، …). إذا توقف عن التنفس مرة أخرى ، قم بإعادة عمل CPR</string>
     <string name="cpr_tittle">الإنعاش القلبي الرئوي (CPR)</string>
     <string name="nerve">التوتر و الاسعافات</string>
     <string name="regain_calm">حاول أن تضع عواطفك تحت السيطرة قبل المتابعة و ان لا تفزع. من الممكن ان تأخذ بعض الوقت للابتعاد واستعادة هدوءك.</string>
@@ -345,13 +345,13 @@
     <string name="no_location">Can not Retrieve Your Location, Try again later</string>
     <string name="hand_wash">غسيل اليدين</string>
     <string name="soap">استخدم الصابون (ويفضل الصابون السائل) لتغطية كل سطح اليد. (بدلاً من ذلك ، يمكنك أيضًا استخدام الرماد الذي لم يعد ساخنًا لغسل يديك).</string>
-    <string name="wash_good">افرك يديك بقوة (40-60 ثانية) واغسل يديك جيداً.</string>
+    <string name="wash_good">افرك يديك بقوة (40–60 ثانية) واغسل يديك جيداً.</string>
     <string name="soap_covers_all">تأكد من أن الصابون يمس جميع أجزاء يديك.</string>
     <string name="finger_tips">لا تنسى أطراف أصابعك والجلد بين أصابعك</string>
     <string name="rinse">اشطف يديك جيدا. استخدم الكثير من الماء.</string>
     <string name="dry">جفيف يديك بمنشفة أو قطعة قماش نظيفة.</string>
     <string name="water_keep">تذكر أن تغلق الصنبور لعدم إهدار المياه</string>
-    <string name="body_shit">في النهاية يمكنك ارتداء قفازات إذا كانت متوفرة أو كيس بلاستيكي نظيف لتغطية يديك إذا كنت قد ستلامس الدماء أو سوائل الجسم (مثل البول ، والقيء ، والبراز ، ...)</string>
+    <string name="body_shit">في النهاية يمكنك ارتداء قفازات إذا كانت متوفرة أو كيس بلاستيكي نظيف لتغطية يديك إذا كنت قد ستلامس الدماء أو سوائل الجسم (مثل البول ، والقيء ، والبراز ، …)</string>
     <string name="loging">Loging</string>
     <string name="wait_till_loging_complete">Wait till loging complete</string>
     <string name="calm">ابق هادئا وطمأن المريض</string>
@@ -389,8 +389,8 @@
     <string name="prepare">كن مستعدًا لتقديم المعلومات التالية عند الاتصال للحصول على المساعدة:</string>
     <string name="location">أ) الموقع المطلوب فيه المساعدة (العنوان ، الشارع ، نقطة مرجعية محددة (علامة مميزة)، إذا كانت في مبنى: الطابق ، الغرفة ، رقم المبنى ، .... ؛</string>
     <string name="mob_phone_number">ب) رقم الهاتف أو رقم الهاتف المحمول الذي تتصل منه ؛</string>
-    <string name="counts">ج) طبيعة المشكلة (ما الذي حدث وكم عدد المصابين ونوع الإصابات التي لاحظتها ...) ؛</string>
-    <string name="type_of_help">د) نوع المساعدة المطلوبة (الإسعاف ، الشرطة ، رجال الإطفاء ، ...) ؛</string>
+    <string name="counts">ج) طبيعة المشكلة (ما الذي حدث وكم عدد المصابين ونوع الإصابات التي لاحظتها …) ؛</string>
+    <string name="type_of_help">د) نوع المساعدة المطلوبة (الإسعاف ، الشرطة ، رجال الإطفاء ، …) ؛</string>
     <string name="other_info">هـ) أي معلومات أخرى قد تكون على علم بها حول الحادث أو المنطقة أو الموقف</string>
     <string name="keep_calm_hero">أبقِ هادئًا دائمًا أنت بطل وأجب عن الأسئلة. إن متلقين المكالمات هم محترفون وسيعطونك المزيد من الإرشادات.</string>
     <string name="safe_position">وضعية الامان</string>

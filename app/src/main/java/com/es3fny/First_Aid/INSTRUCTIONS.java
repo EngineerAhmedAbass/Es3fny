@@ -62,6 +62,15 @@ public class INSTRUCTIONS extends Fragment {
                 startActivity(intent);
             }
         });
+
+        ImageButton btnbaby = view.findViewById(R.id.babycpr);
+        btnbaby.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(INSTRUCTIONS.this.getActivity(), babycpr.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }

@@ -10,14 +10,12 @@
     android:layout_marginTop="15dp">
 
     <ScrollView
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
             android:layout_marginStart="10dp"
@@ -25,7 +23,7 @@
             android:paddingBottom="60dp">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
                 android:layout_marginTop="1dp"
@@ -33,21 +31,23 @@
 
                 <ImageButton
                     android:id="@+id/cprbtn"
-                    android:layout_width="167dp"
-                    android:layout_height="95dp"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="5dp"
                     android:layout_marginEnd="2dp"
                     android:layout_marginStart="2dp"
+                    android:layout_weight="1"
                     android:background="@drawable/rounded_button"
                     android:paddingBottom="5dp"
                     android:paddingTop="5dp"
-                    android:layout_marginBottom="5dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/cpr" />
 
                 <ImageButton
                     android:id="@+id/call"
-                    android:layout_width="167dp"
-                    android:layout_height="95dp"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
                     android:layout_marginEnd="2dp"
                     android:layout_marginStart="2dp"
                     android:background="@drawable/rounded_button"
@@ -62,7 +62,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
                 android:layout_marginTop="1dp"
@@ -70,8 +70,9 @@
 
                 <ImageButton
                     android:id="@+id/babycpr"
-                    android:layout_width="167dp"
-                    android:layout_height="95dp"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
                     android:layout_marginEnd="2dp"
                     android:layout_marginStart="2dp"
                     android:background="@drawable/rounded_button"
@@ -82,9 +83,11 @@
                     android:src="@drawable/babycpr" />
 
                 <ImageButton
+
                     android:id="@+id/dealing"
-                    android:layout_width="167dp"
-                    android:layout_height="95dp"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
                     android:layout_marginEnd="2dp"
                     android:layout_marginStart="2dp"
                     android:background="@drawable/rounded_button"
@@ -97,7 +100,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
                 android:layout_marginTop="1dp"
@@ -105,8 +108,9 @@
 
                 <ImageButton
                     android:id="@+id/wash"
-                    android:layout_width="167dp"
-                    android:layout_height="95dp"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
                     android:layout_marginEnd="2dp"
                     android:layout_marginStart="2dp"
                     android:background="@drawable/rounded_button"
@@ -118,8 +122,9 @@
 
                 <ImageButton
                     android:id="@+id/safety"
-                    android:layout_width="167dp"
-                    android:layout_height="95dp"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
                     android:layout_marginEnd="2dp"
                     android:layout_marginStart="2dp"
                     android:background="@drawable/rounded_button"
@@ -133,7 +138,7 @@
 
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="1dp"
                 android:layout_marginTop="1dp"
@@ -141,8 +146,9 @@
 
                 <ImageButton
                     android:id="@+id/stress"
-                    android:layout_width="336dp"
-                    android:layout_height="95dp"
+                    android:layout_width="0dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="1"
                     android:layout_marginBottom="5dp"
                     android:layout_marginEnd="2dp"
                     android:layout_marginStart="2dp"

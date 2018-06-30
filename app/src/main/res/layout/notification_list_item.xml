@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/textarea_bordered_rounded"
     android:layout_height="wrap_content"
+    android:layout_margin="20dp"
     android:layout_marginBottom="5dp">
 
     <TextView
@@ -11,10 +13,10 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:fontFamily="@font/nunito_semibold"
-        android:background="@drawable/relative_layout_background"
         android:gravity="center"
         android:text="@string/distance"
         android:textSize="18sp"
+        android:padding="5dp"
         android:textStyle="bold" />
 
     <TextView
@@ -22,7 +24,6 @@
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_toStartOf="@+id/distance"
-        android:background="@drawable/relative_layout_background"
         android:layout_alignParentTop="true"
         android:fontFamily="@font/nunito_semibold"
         android:gravity="center"
@@ -35,7 +36,7 @@
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_toStartOf="@+id/distance"
-        android:background="@drawable/relative_layout_background"
+
         android:layout_below="@+id/sender_name"
         android:fontFamily="@font/nunito_semibold"
         android:gravity="center"

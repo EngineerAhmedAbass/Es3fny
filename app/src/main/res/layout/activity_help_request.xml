@@ -22,6 +22,8 @@
                 />
             <RelativeLayout
                 android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
                 android:layout_height="wrap_content">
 
                 <TextView
@@ -30,7 +32,7 @@
                     android:layout_height="47dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="18dp"
+                    android:layout_marginStart="20dp"
                     android:gravity="left"
                     android:paddingTop="10dp"
                     android:text="@string/help_domain"
@@ -42,6 +44,8 @@
                     android:id="@+id/domain_spinner"
                     android:layout_width="fill_parent"
                     android:layout_height="47dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/textarea_bordered_rounded"
                     android:layout_alignParentEnd="true"
                     android:gravity="right"
                     android:textAlignment="center"
@@ -73,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#09f"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="35dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/send_request"/>
 
         </LinearLayout>

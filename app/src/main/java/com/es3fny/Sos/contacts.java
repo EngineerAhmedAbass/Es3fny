@@ -10,6 +10,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.provider.ContactsContract;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,7 +33,7 @@ import java.util.Random;
 
 
 
-public class contacts extends Activity{
+public class contacts extends Activity {
 
     private RelativeLayout parent_Relative_layout;
     public TextView nameView;
@@ -52,6 +55,11 @@ public class contacts extends Activity{
         test_numbers = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
         list = Arrays.asList(test_numbers);
         index_arr = new ArrayList<>();
+
+
+        Toolbar toolbar = findViewById(R.id.app_bar);
+        TextView mTitle =  toolbar.findViewById(R.id.toolbar_title);
+        mTitle.setText("Add/Remove Contact");
 //------------------------------------------------------------------------------------------------------------
         loadData();
 

@@ -130,6 +130,7 @@
             tools:ignore="InnerclassSeparator" />
         <activity
             android:name=".Sos.SosActivity"
+            android:label="SOS"
             android:parentActivityName=".Main.Home"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator" />
@@ -141,6 +142,7 @@
             tools:ignore="InnerclassSeparator" />
         <activity
             android:name=".Sos.contacts"
+            android:label="Managing Contacts"
             android:parentActivityName=".Sos.SosActivity"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator" />

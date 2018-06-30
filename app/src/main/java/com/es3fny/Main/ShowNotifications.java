@@ -269,6 +269,16 @@ public class ShowNotifications extends AppCompatActivity implements AdapterView.
         notificationsList_Help_Request.clear();
         notificationsList_Responces.clear();
         notificationsList_Displayed.clear();
+        if (MyBackgroundService.latitude == null || MyBackgroundService.longtitude == null){
+            swipeRefreshLayout.setRefreshing(false);
+            Toast.makeText(ShowNotifications.this, R.string.no_location, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (MyBackgroundService.latitude.equals("null") || MyBackgroundService.longtitude.equals("null")){
+            swipeRefreshLayout.setRefreshing(false);
+            Toast.makeText(ShowNotifications.this, R.string.no_location, Toast.LENGTH_SHORT).show();
+            return;
+        }
         mFirestore.collection("Users").document(mCurrentID).collection("Notifications").addSnapshotListener(this, new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
@@ -276,6 +286,11 @@ public class ShowNotifications extends AppCompatActivity implements AdapterView.
                     if (doc.getType() == DocumentChange.Type.ADDED) {
                         String Notification_Id = doc.getDocument().getId();
                         MyNotification notifications = doc.getDocument().toObject(MyNotification.class).withId(Notification_Id);
+                        String NotificationLong = notifications.getLongtitude();
+                        String NotificationLat= notifications.getLatitude();
+                        if (NotificationLat.equals("null") || NotificationLong.equals("null")){
+                            continue;
+                        }
                         double Dist = distance(Double.parseDouble(MyBackgroundService.latitude), Double.parseDouble(MyBackgroundService.longtitude), Double.parseDouble(notifications.getLatitude()), Double.parseDouble(notifications.getLongtitude()));
                         notifications.setDistance(Dist);
                         if (notifications.getType().equals("Request")) {

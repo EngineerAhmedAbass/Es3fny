@@ -254,6 +254,10 @@ public class HelpRequest extends AppCompatActivity {
             RequestMessage.put("longtitude", MyBackgroundService.longtitude);
             RequestMessage.put("latitude", MyBackgroundService.latitude);
             RequestMessage.put("date", currentTime);
+        if (MyBackgroundService.latitude == null || MyBackgroundService.longtitude == null){
+            Toast.makeText(HelpRequest.this, R.string.no_location, Toast.LENGTH_SHORT).show();
+            return;
+        }
             mfirestore.collection("Requests").add(RequestMessage).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                 @Override
                 public void onSuccess(DocumentReference documentReference) {

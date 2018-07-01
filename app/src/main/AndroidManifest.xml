@@ -279,14 +279,16 @@
             android:parentActivityName=".First_Aid.MainActivity"
             android:screenOrientation="portrait"
             tools:ignore="InnerclassSeparator" />
-        <activity android:name=".First_Aid.babycpr"
+        <activity
+            android:name=".First_Aid.babycpr"
             android:parentActivityName=".First_Aid.MainActivity"
             android:screenOrientation="portrait"
-            tools:ignore="InnerclassSeparator"/>
-        <activity android:name=".First_Aid.dealing_with_help"
+            tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".First_Aid.dealing_with_help"
             android:parentActivityName=".First_Aid.MainActivity"
             android:screenOrientation="portrait"
-            tools:ignore="InnerclassSeparator"/>
+            tools:ignore="InnerclassSeparator" />
     </application>
 
 </manifest>

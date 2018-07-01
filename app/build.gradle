@@ -18,8 +18,8 @@ android {
         applicationId "com.es3fny"
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 1
-        versionName "1.0.1"
+        versionCode 3
+        versionName "1.2.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true

@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBar;
@@ -24,6 +25,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.es3fny.Main.MyBackgroundService;
 import com.es3fny.Main.SettingsActivity;
 import com.es3fny.Main.ShowNotifications;
 import com.es3fny.R;
@@ -39,6 +41,7 @@ import java.util.Random;
 
 public class Send_SOS_Message extends AppCompatActivity {
     Button buttonSend;
+    MyBackgroundService myBackgroundService;
     public ArrayList<Integer> index_arr = new ArrayList<>();
     public ArrayList<String> Names = new ArrayList<>();
     public ArrayList<String> Numbers = new ArrayList<>();
@@ -51,7 +54,7 @@ public class Send_SOS_Message extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_send__sos__message);
-
+        myBackgroundService = new MyBackgroundService();
         Language_Changed = getIntent().getBooleanExtra("Language_Changed",false);
 
         buttonSend =  findViewById(R.id.buttonSend);
@@ -99,7 +102,7 @@ public class Send_SOS_Message extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String smss = "Please Help Me!";
+
                 Intent intent=new Intent(getApplicationContext(),Send_SOS_Message.class);
 
                 Intent iiintent = new Intent(Send_SOS_Message.this, SosActivity.class);
@@ -108,7 +111,8 @@ public class Send_SOS_Message extends AppCompatActivity {
                 iiintent.putExtra("numbers",Numbers);
                 iiintent.putExtra("sos_switch",sos_switch);
                 PendingIntent pi=PendingIntent.getActivity(getApplicationContext(), 0, intent,0);
-
+                Uri gmmIntentUri = Uri.parse("http://maps.google.com/?q=" +myBackgroundService.latitude + "," + myBackgroundService.longtitude);
+                String smss = "Please Help Me! " + gmmIntentUri;
                 try {
                     SmsManager sms = SmsManager.getDefault();
                     for (int i=0; i<Numbers.size();i++) {

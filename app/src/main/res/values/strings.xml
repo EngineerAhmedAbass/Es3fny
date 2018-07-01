@@ -430,5 +430,8 @@
     <string name="protect">لا تنس حماية الشخص من البرد أو الحرارة!</string>
     <string name="keep_watch_all">دائما تابع الشخص المصاب أو المريض: راقب التنفس ، مستوى الوعي ، التغيرات في الحالة ، مستوى سلامة المنطقة ، ...</string>
     <string name="no_food_no_drink">لا تعطي الشخص أي شيء يأكله أو يشربه. ولكن في حالات انخفاض حرارة الجسم (انخفاض درجة حرارة الجسم) ، صدمة سكر الدم (انخفاض مستوى السكر في مرضى السكري) ، والإسهال والحمى المؤدية إلى الجفاف وفي حالة استنفاد الحرارة أو ضربة الشمس ، وفقط إذا كان الشخص واعيا تماما - قد تحتاج إلى إعطاءه شيء ليشربه.</string>
+    <string name="registration_form">Registration Form</string>
+    <string name="hint1">Hint:(</string>
+    <string name="hint2">)means required fields.</string>
 </resources>
 

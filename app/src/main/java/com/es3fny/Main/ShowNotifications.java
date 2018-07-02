@@ -103,6 +103,7 @@ public class ShowNotifications extends AppCompatActivity implements AdapterView.
                 if(isNetworkAvailable()){
                     ReLoadNotifications();
                 }else{
+                    swipeRefreshLayout.setRefreshing(false);
                     Toast.makeText(ShowNotifications.this, R.string.no_internet, Toast.LENGTH_SHORT).show();
                 }
             }

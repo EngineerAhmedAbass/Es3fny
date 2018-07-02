@@ -337,25 +337,25 @@ public class ShowNotifications extends AppCompatActivity implements AdapterView.
 
     public void Sort_The_Data(String Selected_sort) {
         switch (Selected_sort) {
-            case "Select Sorting Method":
+            case "Select sorting method":
             case "طريقة الترتيب":
                 Collections.sort(notificationsList_Displayed, new Custom_Distace_Comparator());
                 break;
-            case "Ascending by Distance":
-            case "من الاقرب الى الابعد":
+            case "Distance Ascending":
+            case "المسافة من الاقرب الى الابعد":
                 Collections.sort(notificationsList_Displayed, new Custom_Distace_Comparator());
                 break;
-            case "Descending by Distance":
-            case "من الابعد الى الاقرب":
+            case "Distance Descending":
+            case "المسافة من الابعد الى الاقرب":
                 Collections.sort(notificationsList_Displayed, new Custom_Distace_Comparator());
                 Collections.reverse(notificationsList_Displayed);
                 break;
-            case "Ascending by Time":
-            case "من الاقدم الى الاحدث":
+            case "Time Ascending":
+            case "الوقت من الاقدم الى الاحدث":
                 Collections.sort(notificationsList_Displayed, new Custom_Date_Comparator());
                 break;
-            case "Descending by Time":
-            case "من الاحدث الى الاقدم":
+            case "Time Descending":
+            case "الوقت من الاحدث الى الاقدم":
                 Collections.sort(notificationsList_Displayed, new Custom_Date_Comparator());
                 Collections.reverse(notificationsList_Displayed);
                 break;
